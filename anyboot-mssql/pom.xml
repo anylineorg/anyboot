@@ -18,14 +18,9 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.anyboot</groupId>
-			<artifactId>anyboot-web</artifactId>
-			<version>${anyboot.web.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>mssql-jdbc</artifactId>
-			<version>${mssql.jdbc.version}</version>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-mssql</artifactId>
+			<version>${anyline.mssql.version}</version>
 		</dependency>
 	</dependencies>
 </project>

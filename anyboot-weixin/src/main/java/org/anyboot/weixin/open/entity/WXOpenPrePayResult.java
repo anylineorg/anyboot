@@ -1,6 +1,4 @@
 package org.anyboot.weixin.open.entity;
 
-import org.anyboot.weixin.entity.PerPayResult;
-
-public class WXOpenPrePayResult extends PerPayResult{
+public class WXOpenPrePayResult extends org.anyline.weixin.open.entity.WXOpenPrePayResult{
 }

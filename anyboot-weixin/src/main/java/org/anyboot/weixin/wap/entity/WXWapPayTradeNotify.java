@@ -1,8 +1,4 @@
 package org.anyboot.weixin.wap.entity;
 
-import org.anyboot.weixin.entity.TradeNotify;
-
-
-public class WXWapPayTradeNotify extends TradeNotify{
-
+public class WXWapPayTradeNotify extends org.anyline.weixin.wap.entity.WXWapPayTradeNotify{
 }

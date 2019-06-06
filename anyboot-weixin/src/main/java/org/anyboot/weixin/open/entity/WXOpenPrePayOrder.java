@@ -1,7 +1,4 @@
 package org.anyboot.weixin.open.entity;
 
-import org.anyboot.weixin.entity.PrePayOrder;
-
-
-public class WXOpenPrePayOrder extends PrePayOrder{
+public class WXOpenPrePayOrder extends org.anyline.weixin.open.entity.WXOpenPrePayOrder{
 }
