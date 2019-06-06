@@ -10,11 +10,11 @@
 		<version>1.0.0</version>
 	</parent>
 	
-	<artifactId>anyboot-springmvc</artifactId>
+	<artifactId>anyboot-mvc</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<name>anyboot-springmvc</name>
-	<url>http://www.anyboot.org/springmvc</url>
+	<name>anyboot-mvc</name>
+	<url>http://www.anyboot.org/mvc</url>
 	
 	<dependencies>
 		<dependency>
