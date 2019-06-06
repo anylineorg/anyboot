@@ -23,9 +23,9 @@
 			<version>${anyboot.core.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.alipay.sdk</groupId>
-			<artifactId>alipay-sdk-java</artifactId>
-			<version>${alipay.version}</version>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-alipay</artifactId>
+			<version>${anyline.alipay.version}</version>
 		</dependency>
 	</dependencies>
 	
