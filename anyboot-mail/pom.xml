@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.anyboot</groupId>
+		<artifactId>anyboot-maven-jar</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<artifactId>anyboot-mail</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+	<name>anyboot-mail</name>
+	<url>http://www.anyboot.org/mail</url>
+	<dependencies>
+		<dependency>
+			<groupId>org.anyboot</groupId>
+			<artifactId>anyboot-core</artifactId>
+			<version>${anyboot.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${javax.mail.version}</version>
+		</dependency>
+	</dependencies>
+</project>
