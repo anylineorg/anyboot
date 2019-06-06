@@ -18,14 +18,9 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.anyboot</groupId>
-			<artifactId>anyboot-web</artifactId>
-			<version>${anyboot.web.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-springmvc</artifactId>
+			<version>${anyline.springmvc.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>

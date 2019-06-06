@@ -17,14 +17,9 @@
 	<url>http://www.anyboot.org/mail</url>
 	<dependencies>
 		<dependency>
-			<groupId>org.anyboot</groupId>
-			<artifactId>anyboot-core</artifactId>
-			<version>${anyboot.core.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.mail</groupId>
-			<artifactId>mail</artifactId>
-			<version>${javax.mail.version}</version>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-mail</artifactId>
+			<version>${anyline.mail.version}</version>
 		</dependency>
 	</dependencies>
 </project>

@@ -18,9 +18,9 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.anyboot</groupId>
-			<artifactId>anyboot-web</artifactId>
-			<version>${anyboot.web.version}</version>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-mysql</artifactId>
+			<version>${anyline.mysql.version}</version>
 		</dependency>
 	</dependencies>
 </project>

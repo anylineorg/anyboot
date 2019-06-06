@@ -1,8 +1,4 @@
 package org.anyboot.weixin.mp.entity;
 
-import org.anyboot.weixin.entity.TransferBank;
-
-
-public class WXMPTransferBank extends TransferBank{
-
+public class WXMPTransferBank extends org.anyline.weixin.mp.entity.WXMPTransferBank{
 }

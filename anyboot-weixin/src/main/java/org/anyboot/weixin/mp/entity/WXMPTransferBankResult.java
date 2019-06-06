@@ -1,15 +1,4 @@
 package org.anyboot.weixin.mp.entity;
 
-import org.anyboot.weixin.entity.TransferBankResult;
-
-public class WXMPTransferBankResult extends TransferBankResult{
-	public WXMPTransferBankResult(){
-		super();
-	}
-	public WXMPTransferBankResult(boolean result){
-		super(result, null);
-	}
-	public WXMPTransferBankResult(boolean result, String msg){
-		super(result, msg);
-	}
+public class WXMPTransferBankResult extends org.anyline.weixin.mp.entity.WXMPTransferBankResult{
 }

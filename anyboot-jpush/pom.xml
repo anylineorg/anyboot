@@ -18,19 +18,9 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.anyboot</groupId>
-			<artifactId>anyboot-web</artifactId>
-			<version>${anyboot.web.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>cn.jpush.api</groupId>
-			<artifactId>jiguang-common</artifactId>
-			<version>1.1.6</version>
-		</dependency>
-		<dependency>
-			<groupId>cn.jpush.api</groupId>
-			<artifactId>jpush-client</artifactId>
-			<version>3.3.12</version>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-jpush</artifactId>
+			<version>${anyline.jpush.version}</version>
 		</dependency>
 	</dependencies>
 </project>

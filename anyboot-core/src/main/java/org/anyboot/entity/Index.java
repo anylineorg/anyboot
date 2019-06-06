@@ -1,8 +1,4 @@
 package org.anyboot.entity;
 
-import java.util.List;
-
-public class Index {
-	private String type;
-	private List<Object> list;
+public class Index extends org.anyline.entity.Index{
 }
