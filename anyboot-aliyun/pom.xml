@@ -18,19 +18,9 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.anyboot</groupId>
-			<artifactId>anyboot-web</artifactId>
-			<version>${anyboot.web.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.aliyun.oss</groupId>
-			<artifactId>aliyun-sdk-oss</artifactId>
-			<version>${aliyun.oss.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.aliyun</groupId>
-			<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
-			<version>${aliyun.sms.version}</version>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-aliyun</artifactId>
+			<version>${anyline.aliyun.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
