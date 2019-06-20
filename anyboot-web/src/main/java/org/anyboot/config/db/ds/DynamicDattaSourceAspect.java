@@ -20,20 +20,20 @@ public class DynamicDattaSourceAspect {
     //改变数据源
     @Before("@annotation(targetDataSource)")
     public void changeDataSource(JoinPoint joinPoint, TargetDataSource targetDataSource) {
-        String dbid = targetDataSource.name();
+        String ds = targetDataSource.name();
 
-        if (!DataSourceHolder.contains(dbid)) {
+        if (!DataSourceHolder.contains(ds)) {
             //joinPoint.getSignature() ：获取连接点的方法签名对象
-            logger.error("数据源 " + dbid + " 不存在使用默认的数据源 -> " + joinPoint.getSignature());
+            logger.error("[切换数据源][数据源不存在][数据源:" + ds + "]" + joinPoint.getSignature());
         } else {
-            logger.debug("使用数据源：" + dbid);
-            DataSourceHolder.setDataSource(dbid);
+            logger.warn("[切换数据源][数据源:" + ds+"]");
+            DataSourceHolder.setDataSource(ds);
         }
     }
 
     @After("@annotation(targetDataSource)")
     public void clearDataSource(JoinPoint joinPoint, TargetDataSource targetDataSource) {
-        logger.debug("清除数据源 " + targetDataSource.name() + " !");
+        logger.warn("[清除数据源][数据源:" + targetDataSource.name() + "]");
         DataSourceHolder.setDefaultDataSource();
     }
 }
