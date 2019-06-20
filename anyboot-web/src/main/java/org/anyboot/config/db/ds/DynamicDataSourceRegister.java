@@ -5,20 +5,22 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
+import org.anyline.config.db.ds.DataSourceHolder;
+import org.anyline.config.db.ds.DynamicDataSource;
 import org.apache.log4j.Logger;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotationMetadata;
-/**
- * @Description 注册动态数据源
- * 初始化数据源和提供了执行动态切换数据源的工具类
- * EnvironmentAware（获取配置文件配置的属性值）
- */
-public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware{
+ 
+
+public class DynamicDataSourceRegister implements
+		ImportBeanDefinitionRegistrar, EnvironmentAware {
+
 
     private Logger logger = Logger.getLogger(DynamicDataSourceRegister.class);
 
@@ -66,11 +68,11 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         Map<Object, Object> targetDataSources = new HashMap<Object, Object>();
         //添加默认数据源
         targetDataSources.put("dataSource", this.defaultDataSource);
-        DynamicDataSourceContextHolder.dataSourceIds.add("dataSource");
+        DataSourceHolder.reg("dataSource");
         //添加其他数据源
         targetDataSources.putAll(slaveDataSources);
         for (String key : slaveDataSources.keySet()) {
-            DynamicDataSourceContextHolder.dataSourceIds.add(key);
+        	DataSourceHolder.reg(key);
         }
 
         //创建DynamicDataSource
