@@ -4,5 +4,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository("anyboot.msyql.creater")
 public class SQLCreaterImpl extends org.anyline.config.db.impl.mysql.SQLCreaterImpl{
-	private static final long serialVersionUID = -2605208272254135619L;
+	private static final long serialVersionUID = 1L;
 }

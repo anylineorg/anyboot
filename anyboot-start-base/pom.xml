@@ -1,33 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.5.RELEASE</version>
 	</parent>
-	
+
 	<groupId>org.anyboot</groupId>
-	<artifactId>anyboot-maven-jar</artifactId>
-	<version>2.1.5.01</version>
+	<artifactId>anyboot-start-base</artifactId>
+	<version>2.1.5.09</version>
 	<packaging>pom</packaging>
-	<name>anyboot-maven-jar</name>
-	
+	<name>anyboot-start-base</name>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<anyboot.version>2.1.5.01</anyboot.version>
+		<anyboot.version>2.1.5.09</anyboot.version>
 		<anyboot.core.version>${anyboot.version}</anyboot.core.version>
 		<anyboot.ext.version>${anyboot.version}</anyboot.ext.version>
 		<anyboot.web.version>${anyboot.version}</anyboot.web.version>
 		<anyboot.web.ext.version>${anyboot.version}</anyboot.web.ext.version>
-		<anyboot.springmvc.version>${anyboot.version}</anyboot.springmvc.version>
+		<anyboot.mvc.version>${anyboot.version}</anyboot.mvc.version>
 		<anyboot.struts.version>${anyboot.version}</anyboot.struts.version>
-
 		<anyboot.amap.version>${anyboot.version}</anyboot.amap.version>
 		<anyboot.alipay.version>${anyboot.version}</anyboot.alipay.version>
 		<anyboot.aliyun.version>${anyboot.version}</anyboot.aliyun.version>
@@ -40,13 +38,13 @@
 		<anyboot.redis.version>${anyboot.version}</anyboot.redis.version>
 		<anyboot.weixin.version>${anyboot.version}</anyboot.weixin.version>
 
+
 		<anyline.version>8.0.9</anyline.version>
 		<anyline.core.version>${anyline.version}</anyline.core.version>
 		<anyline.ext.version>${anyline.version}</anyline.ext.version>
 		<anyline.web.version>${anyline.version}</anyline.web.version>
 		<anyline.web.ext.version>${anyline.version}</anyline.web.ext.version>
 		<anyline.springmvc.version>${anyline.version}</anyline.springmvc.version>
-		<anyline.struts.version>${anyline.version}</anyline.struts.version>
 		<anyline.amap.version>${anyline.version}</anyline.amap.version>
 		<anyline.alipay.version>${anyline.version}</anyline.alipay.version>
 		<anyline.aliyun.version>${anyline.version}</anyline.aliyun.version>
@@ -58,7 +56,7 @@
 		<anyline.qq.version>${anyline.version}</anyline.qq.version>
 		<anyline.redis.version>${anyline.version}</anyline.redis.version>
 		<anyline.weixin.version>${anyline.version}</anyline.weixin.version>
-		
+
 		<javax.servlet.version>4.0.0</javax.servlet.version>
 		<javax.jsp.version>2.0</javax.jsp.version>
 		<javax.jstl.version>1.1.2</javax.jstl.version>
@@ -77,7 +75,8 @@
 		<ecache.version>2.10.6</ecache.version>
 		<ognl.version>3.2.10</ognl.version>
 		<slf4j.version>1.7.2</slf4j.version>
-
+		<mssql.jdbc.version>7.2.2.jre8</mssql.jdbc.version>
+		<mysql.jdbc.version>5.1.24</mysql.jdbc.version>
 
 		<aliyun.oss.version>3.3.0</aliyun.oss.version>
 		<aliyun.sms.version>1.1.0</aliyun.sms.version>
@@ -85,93 +84,79 @@
 		<druid.version>1.1.6</druid.version>
 		<jsch.version>0.1.55</jsch.version>
 		<persistence.version>1.0.2</persistence.version>
-
 	</properties>
 	<dependencies>
+		<!-- ml或properties配置文件解析 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+		</dependency>
+		<!-- aop 动态数据源 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
+
+		<!-- log4j -->	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j</artifactId>
+			<version>1.3.8.RELEASE</version>
+		</dependency>
 	</dependencies>
 	<build>
-		<resources>
-			<resource>
-				<directory>src/main/java</directory>
-			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>*.tld</include>
-				</includes>
-				<targetPath>META-INF</targetPath>
-			</resource>
-		</resources>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-source-plugin</artifactId>
-					<executions>
-						<execution>
-							<id>attach-sources</id>
-							<goals>
-								<goal>jar</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.0.2</version>
-					<configuration>
-						<excludes>
-							<excludes>*.xml</excludes>
-							<excludes>*.tld</excludes>
-							<excludes>*.xsd</excludes>
-							<excludes>*.properties</excludes>
-						</excludes>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.maven.plugins
-										</groupId>
-										<artifactId>
-											maven-resources-plugin
-										</artifactId>
-										<versionRange>
-											[2.5,)
-										</versionRange>
-										<goals>
-											<goal>resources</goal>
-											<goal>testResources</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-
-			</plugins>
-		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<version>3.1</version>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- 自动热部署 -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin </artifactId>
+				<dependencies>
+					<!--springloaded hot deploy -->
+					<dependency>
+						<groupId>org.springframework</groupId>
+						<artifactId>springloaded</artifactId>
+						<version>1.2.4.RELEASE</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>exec</classifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
-	<distributionManagement>
-		<repository>
-			<id>nexus-releases</id>
-			<url>http://maven.anyline.org/repository/maven-public</url>
-		</repository>
-	</distributionManagement>
 </project>
