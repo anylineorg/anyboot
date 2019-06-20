@@ -7,11 +7,10 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-maven-jar</artifactId>
-		<version>1.0.0</version>
+		<version>2.1.5.01</version>
 	</parent>
 	
 	<artifactId>anyboot-web</artifactId>
-	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>anyboot-web</name>
 	<url>http://www.anyboot.org/web</url>
@@ -21,20 +20,6 @@
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-web</artifactId>
 			<version>${anyline.web.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>${javax.servlet.version}</version>
-			<scope>provided</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>${javax.jsp.version}</version>
-			<scope>provided</scope>
-			<optional>true</optional>
 		</dependency>
 	</dependencies>
 </project>
