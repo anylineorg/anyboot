@@ -7,11 +7,10 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-maven-jar</artifactId>
-		<version>1.0.0</version>
+		<version>2.1.5.01</version>
 	</parent>
 	
 	<artifactId>anyboot-alipay</artifactId>
-	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>anyboot-alipay</name>
 	<url>http://www.anyboot.org/alipay</url>
