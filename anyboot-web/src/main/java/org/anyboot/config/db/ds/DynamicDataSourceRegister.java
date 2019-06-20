@@ -18,23 +18,20 @@ import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotationMetadata;
  
 
-public class DynamicDataSourceRegister implements
-		ImportBeanDefinitionRegistrar, EnvironmentAware {
-
-
-    private Logger logger = Logger.getLogger(DynamicDataSourceRegister.class);
+public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware {
+    private Logger log = Logger.getLogger(DynamicDataSourceRegister.class);
 
     //指定默认数据源(springboot2.0默认数据源是hikari如何想使用其他数据源可以自己配置)
     private static final String DATASOURCE_TYPE_DEFAULT = "com.zaxxer.hikari.HikariDataSource";
     //默认数据源
     private DataSource defaultDataSource;
     //用户自定义数据源
-    private Map<String, DataSource> slaveDataSources = new HashMap<>();
+    private Map<String, DataSource> springDataSources = new HashMap<>();
 
     @Override
     public void setEnvironment(Environment environment) {
         initDefaultDataSource(environment);
-        initslaveDataSources(environment);
+        initspringDataSources(environment);
     }
 
     private void initDefaultDataSource(Environment env) {
@@ -48,18 +45,19 @@ public class DynamicDataSourceRegister implements
     }
 
 
-    private void initslaveDataSources(Environment env) {
+    private void initspringDataSources(Environment env) {
         // 读取配置文件获取更多数据源
-        String dsPrefixs = env.getProperty("slave.datasource.names");
-        for (String dsPrefix : dsPrefixs.split(",")) {
+        String prefixs = env.getProperty("spring.datasource.list");
+        for (String prefix : prefixs.split(",")) {
             // 多个数据源
             Map<String, Object> dsMap = new HashMap<>();
-            dsMap.put("driver", env.getProperty("slave.datasource." + dsPrefix + ".driver"));
-            dsMap.put("url", env.getProperty("slave.datasource." + dsPrefix + ".url"));
-            dsMap.put("username", env.getProperty("slave.datasource." + dsPrefix + ".username"));
-            dsMap.put("password", env.getProperty("slave.datasource." + dsPrefix + ".password"));
+            dsMap.put("driver", env.getProperty("spring.datasource." + prefix + ".driver"));
+            dsMap.put("url", env.getProperty("spring.datasource." + prefix + ".url"));
+            dsMap.put("username", env.getProperty("spring.datasource." + prefix + ".username"));
+            dsMap.put("password", env.getProperty("spring.datasource." + prefix + ".password"));
             DataSource ds = buildDataSource(dsMap);
-            slaveDataSources.put(dsPrefix, ds);
+            springDataSources.put(prefix, ds);
+        	log.warn("[注册数据源][数据源:default]");
         }
     }
 
@@ -70,8 +68,9 @@ public class DynamicDataSourceRegister implements
         targetDataSources.put("dataSource", this.defaultDataSource);
         DataSourceHolder.reg("dataSource");
         //添加其他数据源
-        targetDataSources.putAll(slaveDataSources);
-        for (String key : slaveDataSources.keySet()) {
+        targetDataSources.putAll(springDataSources);
+        for (String key : springDataSources.keySet()) {
+        	log.warn("[注册数据源][数据源:"+key+"]");
         	DataSourceHolder.reg(key);
         }
 
@@ -85,10 +84,10 @@ public class DynamicDataSourceRegister implements
         //注册 - BeanDefinitionRegistry
         beanDefinitionRegistry.registerBeanDefinition("dataSource", beanDefinition);
 
-        logger.info("Dynamic DataSource Registry");
     }
 
-    public DataSource buildDataSource(Map<String, Object> dataSourceMap) {
+    @SuppressWarnings("unchecked")
+	public DataSource buildDataSource(Map<String, Object> dataSourceMap) {
         try {
             Object type = dataSourceMap.get("type");
             if (type == null) {
@@ -101,8 +100,7 @@ public class DynamicDataSourceRegister implements
             String username = dataSourceMap.get("username").toString();
             String password = dataSourceMap.get("password").toString();
             // 自定义DataSource配置
-            DataSourceBuilder factory = DataSourceBuilder.create().driverClassName(driverClassName).url(url)
-                    .username(username).password(password).type(dataSourceType);
+            DataSourceBuilder<?> factory = DataSourceBuilder.create().driverClassName(driverClassName).url(url).username(username).password(password).type(dataSourceType);
             return factory.build();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
