@@ -2,13 +2,8 @@ package org.anyboot.mvc.controller.impl;
 
 import org.anyline.plugin.springmvc.TemplateModelAndView;
 import org.anyline.plugin.springmvc.TemplateView;
-import org.anyline.util.BasicUtil;
-import org.anyline.util.BeanUtil;
 import org.anyline.util.ConfigTable;
-import org.anyline.util.DESUtil;
-import org.anyline.util.HttpUtil;
 import org.anyline.util.WebUtil;
-import org.springframework.web.servlet.ModelAndView;
 
 public class TemplateController extends org.anyline.controller.impl.TemplateController{
 
