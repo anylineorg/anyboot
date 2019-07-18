@@ -42,6 +42,7 @@
 
 		<anyline.version>8.1.0</anyline.version>
 		<anyline.core.version>${anyline.version}</anyline.core.version>
+		<anyline.net.version>${anyline.version}</anyline.net.version>
 		<anyline.ext.version>${anyline.version}</anyline.ext.version>
 		<anyline.web.version>${anyline.version}</anyline.web.version>
 		<anyline.web.ext.version>${anyline.version}</anyline.web.ext.version>
