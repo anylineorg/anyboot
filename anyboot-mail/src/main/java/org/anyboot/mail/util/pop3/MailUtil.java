@@ -55,9 +55,6 @@ public class MailUtil {
         props.setProperty("mail.pop3.port", PORT);           	  
         props.setProperty("mail.pop3.host", HOST);         
 	}
-    public static void main(String[] args) throws Exception {  
-        resceive();  
-    }  
       
     /** 
      * 接收邮件 
