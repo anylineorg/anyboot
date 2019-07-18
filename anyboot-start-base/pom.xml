@@ -39,7 +39,7 @@
 		<anyboot.weixin.version>${anyboot.version}</anyboot.weixin.version>
 
 
-		<anyline.version>8.0.9</anyline.version>
+		<anyline.version>8.1.0</anyline.version>
 		<anyline.core.version>${anyline.version}</anyline.core.version>
 		<anyline.ext.version>${anyline.version}</anyline.ext.version>
 		<anyline.web.version>${anyline.version}</anyline.web.version>
