@@ -86,6 +86,7 @@
 		<persistence.version>1.0.2</persistence.version>
 	</properties>
 	<dependencies>
+	
 		<!-- ml或properties配置文件解析 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
