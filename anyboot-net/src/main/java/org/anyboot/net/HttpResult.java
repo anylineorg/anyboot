@@ -20,5 +20,5 @@
 package org.anyboot.net;
 
 
-public class Source extends org.anyline.net.Source{
+public class HttpResult extends org.anyline.net.HttpResult{
 }
