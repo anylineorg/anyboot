@@ -31,7 +31,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
     @Override
     public void setEnvironment(Environment environment) {
         initDefaultDataSource(environment);
-        initspringDataSources(environment);
+        initSpringDataSources(environment);
     }
 
     private void initDefaultDataSource(Environment env) {
@@ -45,19 +45,21 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
     }
 
 
-    private void initspringDataSources(Environment env) {
+    private void initSpringDataSources(Environment env) {
         // 读取配置文件获取更多数据源
         String prefixs = env.getProperty("spring.datasource.list");
-        for (String prefix : prefixs.split(",")) {
-            // 多个数据源
-            Map<String, Object> dsMap = new HashMap<>();
-            dsMap.put("driver", env.getProperty("spring.datasource." + prefix + ".driver"));
-            dsMap.put("url", env.getProperty("spring.datasource." + prefix + ".url"));
-            dsMap.put("username", env.getProperty("spring.datasource." + prefix + ".username"));
-            dsMap.put("password", env.getProperty("spring.datasource." + prefix + ".password"));
-            DataSource ds = buildDataSource(dsMap);
-            springDataSources.put(prefix, ds);
-        	log.warn("[注册数据源][数据源:default]");
+        if(null != prefixs){
+	        for (String prefix : prefixs.split(",")) {
+	            // 多个数据源
+	            Map<String, Object> dsMap = new HashMap<>();
+	            dsMap.put("driver", env.getProperty("spring.datasource." + prefix + ".driver"));
+	            dsMap.put("url", env.getProperty("spring.datasource." + prefix + ".url"));
+	            dsMap.put("username", env.getProperty("spring.datasource." + prefix + ".username"));
+	            dsMap.put("password", env.getProperty("spring.datasource." + prefix + ".password"));
+	            DataSource ds = buildDataSource(dsMap);
+	            springDataSources.put(prefix, ds);
+	        	log.warn("[注册数据源][数据源:default]");
+	        }
         }
     }
 
