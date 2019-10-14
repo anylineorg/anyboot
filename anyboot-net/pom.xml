@@ -12,7 +12,7 @@
 	
 	<artifactId>anyboot-net</artifactId>
 	<packaging>jar</packaging>
-	<name>anyboot-mysql</name>
+	<name>anyboot-net</name>
 	<url>http://www.anyboot.org/net</url>
 	
 	<dependencies>
