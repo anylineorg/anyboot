@@ -17,12 +17,12 @@
 		<dependency>
 			<groupId>org.anyboot</groupId>
 			<artifactId>anyboot-web</artifactId>
-			<version>2.1.5.818</version>
+			<version>8.1.8</version>
 		</dependency>
 		<dependency>
 			<groupId>org.anyboot</groupId>
 			<artifactId>anyboot-mvc</artifactId>
-			<version>2.1.5.818</version>
+			<version>8.1.8</version>
 		</dependency>
 		<!-- AnylineService,AnylineController -->
 		<dependency>
