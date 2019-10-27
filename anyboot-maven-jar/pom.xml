@@ -11,7 +11,7 @@
 	
 	<groupId>org.anyboot</groupId>
 	<artifactId>anyboot-maven-jar</artifactId>
-	<version>2.1.5.818</version>
+	<version>8.1.8</version>
 	<packaging>pom</packaging>
 	<name>anyboot-maven-jar</name>
 	
@@ -20,7 +20,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<anyboot.version>2.1.5.818</anyboot.version>
+		<anyboot.version>8.1.8</anyboot.version>
 		<anyboot.core.version>${anyboot.version}</anyboot.core.version>
 		<anyboot.ext.version>${anyboot.version}</anyboot.ext.version>
 		<anyboot.net.version>${anyboot.version}</anyboot.net.version>
