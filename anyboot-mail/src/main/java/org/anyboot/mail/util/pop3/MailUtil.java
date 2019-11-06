@@ -34,10 +34,11 @@ import org.anyline.util.BasicUtil;
 import org.anyline.util.ConfigTable;
 import org.anyline.util.DateUtil;
 import org.anyline.util.FileUtil;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MailUtil {
-	private static Logger log = Logger.getLogger(MailUtil.class);
+	private static Logger log = LoggerFactory.getLogger(MailUtil.class);
 	
 	public static final String ACCOUNT = ConfigTable.getString("ACCOUNT");
 	//授权密码
@@ -93,7 +94,7 @@ public class MailUtil {
         	DataRow row = new DataRow();
             MimeMessage msg = (MimeMessage) messages[i];  
             String sendTime = getSentDate(msg);
-            log.info("[解析邮件]:"+msg.getSubject()+",[发送时间]:"+sendTime+",[是否已读]:"+isSeen(msg)+",[是否包含附件]:"+isContainAttachment(msg));
+            log.info("[解析邮件][subject:{}][发送时间]:{}][是否已读:{}][是否包含附件:{}]",msg.getSubject(),sendTime,isSeen(msg),isContainAttachment(msg));
             row.put("TITLE",msg.getSubject());
             row.put("SEND_TIME",sendTime);//邮件发送时间
             boolean isContainerAttachment = isContainAttachment(msg);  

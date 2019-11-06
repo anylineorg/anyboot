@@ -7,7 +7,8 @@ import javax.sql.DataSource;
 
 import org.anyline.config.db.ds.DataSourceHolder;
 import org.anyline.config.db.ds.DynamicDataSource;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
@@ -19,7 +20,7 @@ import org.springframework.core.type.AnnotationMetadata;
  
 
 public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware {
-    private Logger log = Logger.getLogger(DynamicDataSourceRegister.class);
+    private Logger log = LoggerFactory.getLogger(DynamicDataSourceRegister.class);
 
     //指定默认数据源(springboot2.0默认数据源是hikari如何想使用其他数据源可以自己配置)
     private static final String DATASOURCE_TYPE_DEFAULT = "com.zaxxer.hikari.HikariDataSource";
@@ -72,7 +73,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         //添加其他数据源
         targetDataSources.putAll(springDataSources);
         for (String key : springDataSources.keySet()) {
-        	log.warn("[注册数据源][数据源:"+key+"]");
+        	log.warn("[注册数据源][数据源:{}]",key);
         	DataSourceHolder.reg(key);
         }
 

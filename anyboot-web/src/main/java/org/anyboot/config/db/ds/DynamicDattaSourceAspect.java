@@ -2,11 +2,12 @@ package org.anyboot.config.db.ds;
 
 import org.anyline.config.db.ds.DataSourceHolder;
 import org.anyline.config.db.ds.TargetDataSource;
-import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DynamicDattaSourceAspect {
 
-    private Logger logger = Logger.getLogger(DynamicDattaSourceAspect.class);
+    private Logger logger = LoggerFactory.getLogger(DynamicDattaSourceAspect.class);
 
     //改变数据源
     @Before("@annotation(targetDataSource)")
@@ -24,9 +25,9 @@ public class DynamicDattaSourceAspect {
 
         if (!DataSourceHolder.contains(ds)) {
             //joinPoint.getSignature() ：获取连接点的方法签名对象
-            logger.error("[切换数据源][数据源不存在][数据源:" + ds + "]" + joinPoint.getSignature());
+            logger.error("[切换数据源][数据源不存在][数据源:{}][signature:{}]",ds, joinPoint.getSignature());
         } else {
-            logger.warn("[切换数据源][数据源:" + ds+"]");
+            logger.warn("[切换数据源][数据源:{}]",ds);
             DataSourceHolder.setDataSource(ds);
         }
     }
