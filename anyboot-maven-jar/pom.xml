@@ -6,12 +6,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.5.RELEASE</version>
+		<version>2.2.0.RELEASE</version>
 	</parent>
 	
 	<groupId>org.anyboot</groupId>
 	<artifactId>anyboot-maven-jar</artifactId>
-	<version>8.1.8</version>
+	<version>8.2.0</version>
 	<packaging>pom</packaging>
 	<name>anyboot-maven-jar</name>
 	
@@ -20,7 +20,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<anyboot.version>8.1.8</anyboot.version>
+		<anyboot.version>8.2.0</anyboot.version>
 		<anyboot.core.version>${anyboot.version}</anyboot.core.version>
 		<anyboot.ext.version>${anyboot.version}</anyboot.ext.version>
 		<anyboot.net.version>${anyboot.version}</anyboot.net.version>
@@ -42,7 +42,7 @@
 		<anyboot.redis.version>${anyboot.version}</anyboot.redis.version>
 		<anyboot.weixin.version>${anyboot.version}</anyboot.weixin.version>
 
-		<anyline.version>8.1.8</anyline.version>
+		<anyline.version>8.2.0</anyline.version>
 		<anyline.core.version>${anyline.version}</anyline.core.version>
 		<anyline.net.version>${anyline.version}</anyline.net.version>
 		<anyline.nc.version>${anyline.version}</anyline.nc.version>

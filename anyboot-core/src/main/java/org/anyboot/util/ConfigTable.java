@@ -1,12 +1,13 @@
 package org.anyboot.util;
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class ConfigTable extends org.anyline.util.ConfigTable{
-	private static final Logger log = Logger.getLogger(ConfigTable.class);
-	protected static final String version = "2.1.5.810";
+	private static final Logger log = LoggerFactory.getLogger(ConfigTable.class);
+	protected static final String version = "2.2.0.819";
 	protected static final String minVersion = "0007";
 	static{
 		init();
