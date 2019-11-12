@@ -85,8 +85,16 @@
 		<jsch.version>0.1.55</jsch.version>
 		<persistence.version>1.0.2</persistence.version>
 	</properties>
-	<dependencies>
 	
+	<distributionManagement>
+		<repository>
+			<id>anyline-releases</id>
+			<name>releases</name>
+			<url>http://maven.anyline.org/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+	
+	<dependencies>
 		<!-- ml或properties配置文件解析 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
