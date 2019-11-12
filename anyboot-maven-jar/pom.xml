@@ -46,6 +46,7 @@
 		<anyline.core.version>${anyline.version}</anyline.core.version>
 		<anyline.net.version>${anyline.version}</anyline.net.version>
 		<anyline.nc.version>${anyline.version}</anyline.nc.version>
+		<anyline.video.version>${anyline.version}</anyline.video.version>
 		<anyline.ext.version>${anyline.version}</anyline.ext.version>
 		<anyline.web.version>${anyline.version}</anyline.web.version>
 		<anyline.web.ext.version>${anyline.version}</anyline.web.ext.version>
@@ -91,6 +92,15 @@
 		<persistence.version>1.0.2</persistence.version>
 
 	</properties>
+	
+	<distributionManagement>
+		<repository>
+			<id>anyline-releases</id>
+			<name>releases</name>
+			<url>http://maven.anyline.org/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -172,10 +182,4 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	<distributionManagement>
-		<repository>
-			<id>nexus-releases</id>
-			<url>http://maven.anyline.org/repository/maven-public</url>
-		</repository>
-	</distributionManagement>
 </project>
