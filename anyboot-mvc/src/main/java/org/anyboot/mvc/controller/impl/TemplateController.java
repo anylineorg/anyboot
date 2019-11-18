@@ -1,11 +1,39 @@
 package org.anyboot.mvc.controller.impl;
 
+import org.anyline.net.HttpUtil;
 import org.anyline.plugin.springmvc.TemplateModelAndView;
 import org.anyline.plugin.springmvc.TemplateView;
+import org.anyline.util.BasicUtil;
+import org.anyline.util.BeanUtil;
 import org.anyline.util.ConfigTable;
 import org.anyline.util.WebUtil;
 
-public class TemplateController extends org.anyline.controller.impl.TemplateController{
+public class TemplateController extends AnybootController{
+	/**
+	 * 根据dir构造文件目录(super.dir+this.dir)
+	 * @return
+	 */
+	protected String buildDir(){
+		String result = "";
+		try {
+			Class clazz = getClass();
+			while(null != clazz){
+				String dir = (String)BeanUtil.getFieldValue(clazz.newInstance(), "dir", false);
+				if(BasicUtil.isNotEmpty(dir)){
+					result = HttpUtil.mergePath(dir, result);
+				}
+				if(result.startsWith("/")){
+					break;
+				}
+				clazz = clazz.getSuperclass();
+			}
+		} catch (Exception e) {
+		}
+		if(!result.endsWith("/")){
+			result = result + "/";
+		}
+		return result;
+	}
 
 	/**
 	 * 创建显示视图
@@ -21,7 +49,7 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 		内容文件与模板文件 目录结构应该保持一致
 	 * @return
 	 */
-	@Override
+	
 	protected TemplateModelAndView template(boolean adapt, String name, String template){
 		TemplateModelAndView tv = new TemplateModelAndView();
 		if(null != name && !name.startsWith("/")){
@@ -67,17 +95,17 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 		return tv;
 	}
 
-	@Override
+	
 	protected TemplateModelAndView template(boolean adapt, String name){
 		return template(adapt, name, TemplateView.ANYLINE_TEMPLATE_NAME_DEFAULT);
 	}
 
-	@Override
+	
 	protected TemplateModelAndView template(String name){
 		return template(false, name, TemplateView.ANYLINE_TEMPLATE_NAME_DEFAULT);
 	}
 
-	@Override
+	
 	protected TemplateModelAndView template(String name, String template){
 		return template(false, name, template);
 	}
