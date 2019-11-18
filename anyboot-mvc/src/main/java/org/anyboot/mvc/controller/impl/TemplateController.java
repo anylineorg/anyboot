@@ -64,20 +64,21 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 		}
 		tv.setViewName(content_template);
 		tv.addObject(TemplateView.ANYLINE_TEMPLATE_CONTENT_PATH, name);
-		
-//		tv.setViewName(name);
-//		tv.addObject(TemplateView.ANYLINE_TEMPLATE_NAME, content_template);
-//		tv.addObject(TemplateModelAndView.CONTENT_URL,getRequest().getRequestURI());
-//		String style_template = name.substring(0,name.lastIndexOf("/")+1).replace("/page/", "/template/style/");
-//		try{
-//			tv.addObject(TemplateView.ANYLINE_STYLE_TEMPLATE_DES, DESUtil.getInstance().encrypt(style_template));
-//		}catch(Exception e){
-//			e.printStackTrace();
-//		}
-//		
-//		String clazz = this.getClass().getName();
-//		tv.setFromClass(clazz);
 		return tv;
 	}
-	
+
+	@Override
+	protected TemplateModelAndView template(boolean adapt, String name){
+		return template(adapt, name, TemplateView.ANYLINE_TEMPLATE_NAME_DEFAULT);
+	}
+
+	@Override
+	protected TemplateModelAndView template(String name){
+		return template(false, name, TemplateView.ANYLINE_TEMPLATE_NAME_DEFAULT);
+	}
+
+	@Override
+	protected TemplateModelAndView template(String name, String template){
+		return template(false, name, template);
+	}
 }
