@@ -30,19 +30,6 @@
 			<artifactId>anyline-springmvc</artifactId>
 			<version>${anyline.springmvc.version}</version>
 		</dependency>
-		<!-- mysql适配 -->
-		<dependency>
-			<groupId>org.anyline</groupId>
-			<artifactId>anyline-mysql</artifactId>
-			<version>${anyline.mysql.version}</version>
-		</dependency>
-		
-		
-		<!-- mysql -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
 		<!-- jdbcTemplate -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
