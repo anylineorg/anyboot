@@ -10,16 +10,16 @@
 		<version>2.2.1.830</version>
 	</parent>
 	
-	<artifactId>anyboot-jdbc-mysql</artifactId>
+	<artifactId>anyboot-jdbc-oracle</artifactId>
 	<packaging>jar</packaging>
-	<name>anyboot-jdbc-mysql</name>
-	<url>http://www.anyboot.org/mysql</url>
+	<name>anyboot-oracle</name>
+	<url>http://www.anyboot.org/oracle</url>
 	
 	<dependencies>
 		<dependency>
 			<groupId>org.anyline</groupId>
-			<artifactId>anyline-jdbc-mysql</artifactId>
-			<version>${anyline.jdbc.mysql.version}</version>
+			<artifactId>anyline-jdbc-oracle</artifactId>
+			<version>${anyline.jdbc.oracle.version}</version>
 		</dependency>
 	</dependencies>
 </project>
