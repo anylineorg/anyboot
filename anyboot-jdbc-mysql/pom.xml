@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.anyboot</groupId>
+		<artifactId>anyboot-maven-jar</artifactId>
+		<version>2.2.1.830</version>
+	</parent>
+	
+	<artifactId>anyboot-mysql</artifactId>
+	<packaging>jar</packaging>
+	<name>anyboot-mysql</name>
+	<url>http://www.anyboot.org/mysql</url>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-jdbc-mysql</artifactId>
+			<version>${anyline.mysql.version}</version>
+		</dependency>
+	</dependencies>
+</project>
