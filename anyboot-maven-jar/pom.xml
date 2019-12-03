@@ -35,12 +35,21 @@
 		<anyboot.easemob.version>${anyboot.version}</anyboot.easemob.version>
 		<anyboot.jpush.version>${anyboot.version}</anyboot.jpush.version>
 		<anyboot.mail.version>${anyboot.version}</anyboot.mail.version>
-		<anyboot.mssql.version>${anyboot.version}</anyboot.mssql.version>
-		<anyboot.mysql.version>${anyboot.version}</anyboot.mysql.version>
 		<anyboot.qq.version>${anyboot.version}</anyboot.qq.version>
 		<anyboot.redis.version>${anyboot.version}</anyboot.redis.version>
 		<anyboot.weixin.version>${anyboot.version}</anyboot.weixin.version>
 
+
+
+		<anyboot.jdbc.mssql.version>${anyboot.version}</anyboot.jdbc.mssql.version>
+		<anyboot.jdbc.mysql.version>${anyboot.version}</anyboot.jdbc.mysql.version>
+		<anyboot.jdbc.db2.version>${anyboot.version}</anyboot.jdbc.db2.version>
+		<anyboot.jdbc.oracle.version>${anyboot.version}</anyboot.jdbc.oracle.version>
+		<anyboot.jdbc.postgresql.version>${anyboot.version}</anyboot.jdbc.postgresql.version>
+		<anyboot.jdbc.hgdb.version>${anyboot.version}</anyboot.jdbc.hgdb.version>
+		
+		
+		<!-- anyline -->
 		<anyline.version>8.3.0</anyline.version>
 		<anyline.core.version>${anyline.version}</anyline.core.version>
 		<anyline.net.version>${anyline.version}</anyline.net.version>
@@ -57,11 +66,27 @@
 		<anyline.easemob.version>${anyline.version}</anyline.easemob.version>
 		<anyline.jpush.version>${anyline.version}</anyline.jpush.version>
 		<anyline.mail.version>${anyline.version}</anyline.mail.version>
-		<anyline.mssql.version>${anyline.version}</anyline.mssql.version>
-		<anyline.mysql.version>${anyline.version}</anyline.mysql.version>
 		<anyline.qq.version>${anyline.version}</anyline.qq.version>
 		<anyline.redis.version>${anyline.version}</anyline.redis.version>
 		<anyline.weixin.version>${anyline.version}</anyline.weixin.version>
+		
+		
+		<anyline.jdbc.mssql.version>${anyline.version}</anyline.jdbc.mssql.version>
+		<anyline.jdbc.mysql.version>${anyline.version}</anyline.jdbc.mysql.version>
+		<anyline.jdbc.db2.version>${anyline.version}</anyline.jdbc.db2.version>
+		<anyline.jdbc.oracle.version>${anyline.version}</anyline.jdbc.oracle.version>
+		<anyline.jdbc.postgresql.version>${anyline.version}</anyline.jdbc.postgresql.version>
+		<anyline.jdbc.hgdb.version>${anyline.version}</anyline.jdbc.hgdb.version>
+		
+		
+		<mssql-jdbc.version>7.2.2.jre8</mssql-jdbc.version>
+		<mysql.version>5.1.24</mysql.version>
+		<db2-jdbc.version>11.5.0.0</db2-jdbc.version>
+		<ojdbc.version>19.3.0.0</ojdbc.version><!-- oracle -->
+		<postgresql.version>42.2.8</postgresql.version>
+		<hgdb.version>4.0-jdbc42</hgdb.version>
+		<mariadb.version>2.4.4</mariadb.version>
+		
 		
 		<javax.servlet.version>4.0.0</javax.servlet.version>
 		<javax.jsp.version>2.0</javax.jsp.version>

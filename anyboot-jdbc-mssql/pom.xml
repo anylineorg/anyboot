@@ -10,16 +10,16 @@
 		<version>2.2.1.830</version>
 	</parent>
 	
-	<artifactId>anyboot-mssql</artifactId>
+	<artifactId>anyboot-jdbc-mssql</artifactId>
 	<packaging>jar</packaging>
-	<name>anyboot-mssql</name>
+	<name>anyboot-jdbc-mssql</name>
 	<url>http://www.anyboot.org/mssql</url>
 	
 	<dependencies>
 		<dependency>
 			<groupId>org.anyline</groupId>
-			<artifactId>anyline-mssql</artifactId>
-			<version>${anyline.mssql.version}</version>
+			<artifactId>anyline-jdbc-mssql</artifactId>
+			<version>${anyline.jdbc.mssql.version}</version>
 		</dependency>
 	</dependencies>
 </project>
