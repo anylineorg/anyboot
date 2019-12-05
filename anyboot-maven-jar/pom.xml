@@ -9,7 +9,7 @@
 		<version>2.2.1.RELEASE</version>
 	</parent>
 	
-	<groupId>org.anyboot</groupId>
+	<groupId>org.anyline</groupId>
 	<artifactId>anyboot-maven-jar</artifactId>
 	<version>2.2.1.831</version>
 	<packaging>pom</packaging>

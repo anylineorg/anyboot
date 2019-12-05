@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
-		<groupId>org.anyboot</groupId>
+		<groupId>org.anyline</groupId>
 		<artifactId>anyboot-maven-jar</artifactId>
 		<version>2.2.1.831</version>
 	</parent>
@@ -16,7 +16,7 @@
 	<url>http://www.anyboot.org/mvc</url>
 	<dependencies>
 		<dependency>
-			<groupId>org.anyboot</groupId>
+			<groupId>org.anyline</groupId>
 			<artifactId>anyboot-web</artifactId>
 			<version>${anyboot.web.version}</version>
 		</dependency>
