@@ -11,7 +11,7 @@ import org.anyline.util.WebUtil;
 public class TemplateController extends AnybootController{
 	/**
 	 * 根据dir构造文件目录(super.dir+this.dir)
-	 * @return
+	 * @return return
 	 */
 	protected String buildDir(){
 		String result = "";
@@ -47,7 +47,7 @@ public class TemplateController extends AnybootController{
 		拼接时,先拼当前类的dir 再拼父类中的dir
 		另外:template不指定时template(page)默认为default.jsp
 		内容文件与模板文件 目录结构应该保持一致
-	 * @return
+	 * @return return
 	 */
 	
 	protected TemplateModelAndView template(boolean adapt, String name, String template){
