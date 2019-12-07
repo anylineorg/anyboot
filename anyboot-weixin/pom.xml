@@ -6,8 +6,8 @@
 
 	<parent>
 		<groupId>org.anyline</groupId>
-		<artifactId>anyboot-maven-jar</artifactId>
-		<version>2.2.1.831</version>
+		<artifactId>anyboot-dependency</artifactId>
+		<version>2.2.1.832</version>
 	</parent>
 	
 	<artifactId>anyboot-weixin</artifactId>
