@@ -111,9 +111,9 @@ public class MailUtil {
     
     /**
      * 删除邮件
-     * @param messages
-     * @throws MessagingException
-     * @throws IOException
+     * @param messages messages
+     * @throws MessagingException MessagingException
+     * @throws IOException IOException
      */
     public static void deleteMessage(Message ...messages) throws MessagingException, IOException {  
         if (messages == null || messages.length < 1)   
