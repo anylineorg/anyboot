@@ -22,8 +22,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.anyline</groupId>
-			<artifactId>anyline-springmvc</artifactId>
-			<version>${anyline.springmvc.version}</version>
+			<artifactId>anyline-mvc</artifactId>
+			<version>${anyline.mvc.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
