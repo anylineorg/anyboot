@@ -11,11 +11,16 @@
 	</parent>
 	
 	<artifactId>anyboot-web</artifactId>
-	<packaging>jar</packaging>
 	<name>anyboot-web</name>
+	<packaging>jar</packaging>
 	<url>http://www.anyboot.org/web</url>
 
 	<dependencies>
+		<!-- spring boot web支持 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-web</artifactId>
@@ -25,6 +30,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 			<scope>compile</scope>
+		</dependency>
+		
+		<!-- jdbcTemplate -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 	</dependencies>
 </project>

@@ -13,34 +13,10 @@
 	<name>anyboot-start-mvc</name>
 
 	<dependencies>
-		<!-- 主要用来注册切换动态数据源 -->
-		<dependency>
-			<groupId>org.anyline</groupId>
-			<artifactId>anyboot-web</artifactId>
-			<version>${anyboot.web.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyboot-mvc</artifactId>
 			<version>${anyboot.mvc.version}</version>
-		</dependency>
-		<!-- AnylineService,AnylineController -->
-		<dependency>
-			<groupId>org.anyline</groupId>
-			<artifactId>anyline-springmvc</artifactId>
-			<version>${anyline.springmvc.version}</version>
-		</dependency>
-		<!-- jdbcTemplate -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
-		
-		
-		<!-- spring boot web支持 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
 		<!-- tomcat支持 -->
