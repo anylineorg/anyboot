@@ -57,9 +57,11 @@ public class MailUtil {
         props.setProperty("mail.pop3.host", HOST);         
 	}
       
-    /** 
-     * 接收邮件 
-     */  
+    /**
+     * 邮件列表
+     * @return 邮件列表
+     * @throws Exception Exception
+     */
     public static DataSet resceive() throws Exception { 
         Session session = Session.getInstance(props);  
         Store store = session.getStore("pop3");  
@@ -80,9 +82,12 @@ public class MailUtil {
     }  
       
     /** 
-     * 解析邮件 
-     * @param messages 要解析的邮件列表 
-     */  
+     * 解析邮件 要
+     * @param messages 解析的邮件列表 
+     * @return 解析邮件 
+     * @throws MessagingException MessagingException
+     * @throws IOException IOException
+     */
     public static DataSet parseMessage(Message ...messages) throws MessagingException, IOException {  
     	DataSet set = new DataSet();
         if (messages == null || messages.length < 1){
@@ -129,9 +134,9 @@ public class MailUtil {
     
     /**
      * 标记为已读
-     * @param messages
-     * @throws MessagingException
-     * @throws IOException
+     * @param messages messages
+     * @throws MessagingException MessagingException
+     * @throws IOException IOException
      */
     public static void seenMessage(Message ...messages) throws MessagingException, IOException {  
         if (messages == null || messages.length < 1)   
@@ -148,6 +153,8 @@ public class MailUtil {
      * 获得邮件主题 
      * @param msg 邮件内容 
      * @return 解码后的邮件主题 
+     * @throws UnsupportedEncodingException UnsupportedEncodingException
+     * @throws MessagingException MessagingException
      */  
     public static String getSubject(MimeMessage msg) throws UnsupportedEncodingException, MessagingException {  
         return MimeUtility.decodeText(msg.getSubject());  
@@ -156,9 +163,9 @@ public class MailUtil {
     /** 
      * 获得邮件发件人 
      * @param msg 邮件内容 
-     * @return 姓名 <Email地址> 
-     * @throws MessagingException 
-     * @throws UnsupportedEncodingException  
+     * @return 姓名 
+     * @throws MessagingException MessagingException
+     * @throws UnsupportedEncodingException  UnsupportedEncodingException
      */  
     public static String getFrom(MimeMessage msg) throws MessagingException, UnsupportedEncodingException {  
         String from = "";  
@@ -180,13 +187,13 @@ public class MailUtil {
       
     /** 
      * 根据收件人类型，获取邮件收件人、抄送和密送地址。如果收件人类型为空，则获得所有的收件人 
-     * <p>Mail.RecipientType.TO  收件人</p> 
-     * <p>Mail.RecipientType.CC  抄送</p> 
-     * <p>Mail.RecipientType.BCC 密送</p> 
+     *  Mail.RecipientType.TO  收件人 
+     *  Mail.RecipientType.CC  抄送 
+     *  Mail.RecipientType.BCC 密送  
      * @param msg 邮件内容 
      * @param type 收件人类型 
-     * @return 收件人1 <邮件地址1>, 收件人2 <邮件地址2>, ... 
-     * @throws MessagingException 
+     * @return 收件人邮件地址, 收件邮件地址2, ... 
+     * @throws MessagingException  MessagingException
      */  
     public static String getReceiveAddress(MimeMessage msg, Message.RecipientType type) throws MessagingException {  
         StringBuffer receiveAddress = new StringBuffer();  
@@ -213,7 +220,7 @@ public class MailUtil {
      * 获得邮件发送时间 
      * @param msg 邮件内容 
      * @return yyyy年mm月dd日 星期X HH:mm 
-     * @throws MessagingException 
+     * @throws MessagingException  MessagingException
      */  
     public static String getSentDate(MimeMessage msg) throws MessagingException {  
     	return getSentDate(msg,null);
@@ -232,8 +239,8 @@ public class MailUtil {
      * 判断邮件中是否包含附件 
      * @param msg 邮件内容 
      * @return 邮件中存在附件返回true，不存在返回false 
-     * @throws MessagingException 
-     * @throws IOException 
+     * @throws MessagingException  MessagingException
+     * @throws IOException IOException
      */  
     public static boolean isContainAttachment(Part part) throws MessagingException, IOException {  
         boolean flag = false;  
@@ -270,7 +277,7 @@ public class MailUtil {
      * 判断邮件是否已读  
      * @param msg 邮件内容  
      * @return 如果邮件已读返回true,否则返回false  
-     * @throws MessagingException   
+     * @throws MessagingException    MessagingException
      */  
     public static boolean isSeen(MimeMessage msg) throws MessagingException {  
         return msg.getFlags().contains(Flags.Flag.SEEN);  
@@ -280,7 +287,7 @@ public class MailUtil {
      * 判断邮件是否需要阅读回执 
      * @param msg 邮件内容 
      * @return 需要回执返回true,否则返回false 
-     * @throws MessagingException 
+     * @throws MessagingException  MessagingException
      */  
     public static boolean isReplySign(MimeMessage msg) throws MessagingException {  
         boolean replySign = false;  
@@ -294,7 +301,7 @@ public class MailUtil {
      * 获得邮件的优先级 
      * @param msg 邮件内容 
      * @return 1(High):紧急  3:普通(Normal)  5:低(Low) 
-     * @throws MessagingException  
+     * @throws MessagingException   MessagingException
      */  
     public static String getPriority(MimeMessage msg) throws MessagingException {  
         String priority = "普通";  
@@ -315,8 +322,8 @@ public class MailUtil {
      * 获得邮件文本内容 
      * @param part 邮件体 
      * @param content 存储邮件文本内容的字符串 
-     * @throws MessagingException 
-     * @throws IOException 
+     * @throws MessagingException  MessagingException
+     * @throws IOException IOException
      */  
     public static void getMailTextContent(Part part, StringBuffer content) throws MessagingException, IOException {  
         //如果是文本类型的附件，通过getContent方法可以取到文本内容，但这不是我们需要的结果，所以在这里要做判断  
@@ -342,10 +349,9 @@ public class MailUtil {
      * 保存附件  
      * @param part 邮件中多个组合体中的其中一个组合体  
      * @param destDir  附件保存目录  
-     * @throws UnsupportedEncodingException  
-     * @throws MessagingException  
-     * @throws FileNotFoundException  
-     * @throws IOException  
+     * @return 附件列表
+     * @throws UnsupportedEncodingException UnsupportedEncodingException  
+     * @throws MessagingException  MessagingException
      */  
     
     public static List<String> downloadAttachment(Part part, String destDir,List<String> fileNMs) throws UnsupportedEncodingException, MessagingException,  
@@ -387,8 +393,7 @@ public class MailUtil {
      * @param is 输入流  
      * @param fileName 文件名  
      * @param destDir 文件存储目录  
-     * @throws FileNotFoundException  
-     * @throws IOException  
+     * @return return
      */  
     private static boolean saveFile(InputStream is, String destDir, String fileName)  
             throws FileNotFoundException, IOException {  
