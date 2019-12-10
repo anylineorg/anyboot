@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 
 import org.anyline.config.db.ds.DataSourceHolder;
 import org.anyline.config.db.ds.DynamicDataSource;
+import org.anyline.util.BasicUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.MutablePropertyValues;
@@ -38,7 +39,11 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
     private void initDefaultDataSource(Environment env) {
         // 读取主数据源
         Map<String, Object> dsMap = new HashMap<>();
-        dsMap.put("driver", env.getProperty("spring.datasource.driver"));
+        String driver = env.getProperty("spring.datasource.driver");
+        if(BasicUtil.isEmpty(driver)){
+        	driver = env.getProperty("spring.datasource.driver-class-name");
+        }
+        dsMap.put("driver", driver);
         dsMap.put("url", env.getProperty("spring.datasource.url"));
         dsMap.put("username", env.getProperty("spring.datasource.username"));
         dsMap.put("password", env.getProperty("spring.datasource.password"));
@@ -53,7 +58,11 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 	        for (String prefix : prefixs.split(",")) {
 	            // 多个数据源
 	            Map<String, Object> dsMap = new HashMap<>();
-	            dsMap.put("driver", env.getProperty("spring.datasource." + prefix + ".driver"));
+	            String driver = env.getProperty("spring.datasource." + prefix + ".driver");
+	            if(BasicUtil.isEmpty(driver)){
+	            	env.getProperty("spring.datasource." + prefix + ".driver-class-name");
+	            }
+	            dsMap.put("driver", driver);
 	            dsMap.put("url", env.getProperty("spring.datasource." + prefix + ".url"));
 	            dsMap.put("username", env.getProperty("spring.datasource." + prefix + ".username"));
 	            dsMap.put("password", env.getProperty("spring.datasource." + prefix + ".password"));
