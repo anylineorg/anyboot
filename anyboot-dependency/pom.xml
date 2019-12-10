@@ -6,12 +6,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.6.RELEASE</version>
+		<version>2.2.2.RELEASE</version>
 	</parent>
 	
 	<groupId>org.anyline</groupId>
 	<artifactId>anyboot-dependency</artifactId>
-	<version>2.0.6.832</version>
+	<version>2.2.2.832</version>
 	<packaging>pom</packaging>
 	<name>AnyBoot</name>
 	<description>AnyLine针对SpringBoot环境的支持</description>
@@ -35,13 +35,14 @@
 		<developerConnection>scm:git:ssh://github.com:anyboot/anyboot.git</developerConnection>
 		<url>https://github.com/anyboot/anyboot</url>
 	</scm>
-	
 	<properties>
+	    <java.version>1.8</java.version>
+	    <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<anyboot.version>2.0.6.832</anyboot.version>
+		<anyboot.version>2.2.2.832</anyboot.version>
 		<anyboot.core.version>${anyboot.version}</anyboot.core.version>
 		<anyboot.ext.version>${anyboot.version}</anyboot.ext.version>
 		<anyboot.net.version>${anyboot.version}</anyboot.net.version>
@@ -161,7 +162,6 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<!-- 必须配置 source -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -174,7 +174,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- 必须配置 javadoc -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -187,19 +186,18 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- 必须配置 sonatype -->
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<version>1.6.7</version>
 				<extensions>true</extensions>
 				<configuration>
-					<serverId>ossrh</serverId> <!-- 等于上面Settings中server的id值。 -->
+					<serverId>ossrh</serverId> <!-- 对应Settings中server的id值。 -->
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
-			<!-- 必须配置 GPG -->
+			<!-- GPG -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
