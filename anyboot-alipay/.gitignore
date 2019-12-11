@@ -16,7 +16,6 @@
 *.ipr
 ## eclipse ##
 *.classpath
-*.project
 /.settings
 
 
