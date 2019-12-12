@@ -73,7 +73,7 @@
 		
 		
 		<!-- anyline -->
-		<anyline.version>8.3.2</anyline.version>
+		<anyline.version>8.3.3</anyline.version>
 		<anyline.core.version>${anyline.version}</anyline.core.version>
 		<anyline.net.version>${anyline.version}</anyline.net.version>
 		<anyline.nc.version>${anyline.version}</anyline.nc.version>
