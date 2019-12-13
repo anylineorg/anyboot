@@ -13,20 +13,10 @@
 	<name>anyboot-start-mvc</name>
 
 	<dependencies>
-		<!-- 连接池 -->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>${druid.version}</version>
-		</dependency>
-		<!-- end 连接池 -->
-		
-		<!-- spring mvc -->
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyboot-mvc</artifactId>
 			<version>${anyboot.mvc.version}</version>
 		</dependency>
-		<!-- end spring mvc -->
 	</dependencies>
 </project>

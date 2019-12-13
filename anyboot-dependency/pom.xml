@@ -6,12 +6,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.2.RELEASE</version>
+		<version>2.0.6.RELEASE</version>
 	</parent>
 	
 	<groupId>org.anyline</groupId>
 	<artifactId>anyboot-dependency</artifactId>
-	<version>2.2.2.832</version>
+	<version>2.0.6.833</version>
 	<packaging>pom</packaging>
 	<name>AnyBoot</name>
 	<description>AnyLine针对SpringBoot环境的支持</description>
@@ -36,13 +36,14 @@
 		<url>https://github.com/anyboot/anyboot</url>
 	</scm>
 	<properties>
+	
 	    <java.version>1.8</java.version>
-	    <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-
-		<anyboot.version>2.2.2.832</anyboot.version>
+		
+		
+		<anyboot.version>2.0.6.833</anyboot.version>
 		<anyboot.core.version>${anyboot.version}</anyboot.core.version>
 		<anyboot.ext.version>${anyboot.version}</anyboot.ext.version>
 		<anyboot.net.version>${anyboot.version}</anyboot.net.version>
@@ -50,6 +51,7 @@
 		<anyboot.web.version>${anyboot.version}</anyboot.web.version>
 		<anyboot.web.ext.version>${anyboot.version}</anyboot.web.ext.version>
 		<anyboot.springmvc.version>${anyboot.version}</anyboot.springmvc.version>
+		<anyboot.mvc.version>${anyboot.version}</anyboot.mvc.version>
 		<anyboot.struts.version>${anyboot.version}</anyboot.struts.version>
 
 		<anyboot.amap.version>${anyboot.version}</anyboot.amap.version>
@@ -62,15 +64,12 @@
 		<anyboot.redis.version>${anyboot.version}</anyboot.redis.version>
 		<anyboot.weixin.version>${anyboot.version}</anyboot.weixin.version>
 
-
-
 		<anyboot.jdbc.mssql.version>${anyboot.version}</anyboot.jdbc.mssql.version>
 		<anyboot.jdbc.mysql.version>${anyboot.version}</anyboot.jdbc.mysql.version>
 		<anyboot.jdbc.db2.version>${anyboot.version}</anyboot.jdbc.db2.version>
 		<anyboot.jdbc.oracle.version>${anyboot.version}</anyboot.jdbc.oracle.version>
 		<anyboot.jdbc.postgresql.version>${anyboot.version}</anyboot.jdbc.postgresql.version>
 		<anyboot.jdbc.hgdb.version>${anyboot.version}</anyboot.jdbc.hgdb.version>
-		
 		
 		<!-- anyline -->
 		<anyline.version>8.3.3</anyline.version>
@@ -93,14 +92,12 @@
 		<anyline.redis.version>${anyline.version}</anyline.redis.version>
 		<anyline.weixin.version>${anyline.version}</anyline.weixin.version>
 		
-		
 		<anyline.jdbc.mssql.version>${anyline.version}</anyline.jdbc.mssql.version>
 		<anyline.jdbc.mysql.version>${anyline.version}</anyline.jdbc.mysql.version>
 		<anyline.jdbc.db2.version>${anyline.version}</anyline.jdbc.db2.version>
 		<anyline.jdbc.oracle.version>${anyline.version}</anyline.jdbc.oracle.version>
 		<anyline.jdbc.postgresql.version>${anyline.version}</anyline.jdbc.postgresql.version>
 		<anyline.jdbc.hgdb.version>${anyline.version}</anyline.jdbc.hgdb.version>
-		
 		
 		<mssql-jdbc.version>7.2.2.jre8</mssql-jdbc.version>
 		<mysql.version>5.1.24</mysql.version>
@@ -109,7 +106,6 @@
 		<postgresql.version>42.2.8</postgresql.version>
 		<hgdb.version>4.0-jdbc42</hgdb.version>
 		<mariadb.version>2.4.4</mariadb.version>
-		
 		
 		<javax.servlet.version>4.0.0</javax.servlet.version>
 		<javax.jsp.version>2.0</javax.jsp.version>
@@ -129,7 +125,6 @@
 		<oro.version>2.0.8</oro.version>
 		<ecache.version>2.10.6</ecache.version>
 		<ognl.version>3.2.10</ognl.version>
-
 
 		<aliyun.oss.version>3.3.0</aliyun.oss.version>
 		<aliyun.sms.version>1.1.0</aliyun.sms.version>
@@ -192,12 +187,11 @@
 				<version>1.6.7</version>
 				<extensions>true</extensions>
 				<configuration>
-					<serverId>ossrh</serverId> <!-- 对应Settings中server的id值。 -->
+					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
-			<!-- GPG -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>

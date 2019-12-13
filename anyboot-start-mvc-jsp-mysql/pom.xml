@@ -13,6 +13,7 @@
 	<name>anyboot-start-mvc</name>
 
 	<dependencies>
+		
 		<!-- 连接池 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -28,5 +29,26 @@
 			<version>${anyboot.mvc.version}</version>
 		</dependency>
 		<!-- end spring mvc -->
+		
+		<!-- jsp -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${javax.jstl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>${taglibs.standard.version}</version>
+		</dependency>
+		<!-- end jsp -->
+		
+		<!-- mysql -->
+		<dependency>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyboot-jdbc-mysql</artifactId>
+			<version>${anyboot.jdbc.mysql.version}</version>
+		</dependency>
+		<!-- end mysql -->
 	</dependencies>
 </project>
