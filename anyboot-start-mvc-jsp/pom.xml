@@ -8,9 +8,9 @@
 		<version>2.0.6.833</version>
 	</parent>
 
-	<artifactId>anyboot-start-mvc</artifactId>
+	<artifactId>anyboot-start-mvc-jsp</artifactId>
 	<packaging>pom</packaging>
-	<name>anyboot-start-mvc</name>
+	<name>anyboot-start-mvc-jsp</name>
 
 	<dependencies>
 		<!-- 连接池 -->
@@ -28,5 +28,18 @@
 			<version>${anyboot.mvc.version}</version>
 		</dependency>
 		<!-- end spring mvc -->
+		
+		<!-- jsp -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${javax.jstl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>${taglibs.standard.version}</version>
+		</dependency>
+		<!-- end jsp -->
 	</dependencies>
 </project>

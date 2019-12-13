@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
+
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>org.anyline</groupId>
 		<artifactId>anyboot-dependency</artifactId>
 		<version>2.0.6.833</version>
 	</parent>
-	
-	<artifactId>anyboot-core</artifactId>
+
+	<artifactId>anyboot-aliyun</artifactId>
 	<packaging>jar</packaging>
-	<name>anyboot-core</name>
-	<url>http://www.anyboot.org/core</url>
+	<name>anyboot-aliyun</name>
+	<url>http://www.anyboot.org/aliyun</url>
 	
 	<dependencies>
 		<dependency>
 			<groupId>org.anyline</groupId>
-			<artifactId>anyline-core</artifactId>
-			<version>${anyline.core.version}</version>
+			<artifactId>anyline-aliyun</artifactId>
+			<version>${anyline.aliyun.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${javax.jsp.version}</version>
+			<scope>provided</scope>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 </project>
