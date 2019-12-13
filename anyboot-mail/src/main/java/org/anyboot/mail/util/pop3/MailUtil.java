@@ -237,7 +237,7 @@ public class MailUtil {
       
     /** 
      * 判断邮件中是否包含附件 
-     * @param msg 邮件内容 
+     * @param part 邮件内容 
      * @return 邮件中存在附件返回true，不存在返回false 
      * @throws MessagingException  MessagingException
      * @throws IOException IOException
@@ -348,16 +348,19 @@ public class MailUtil {
     /**  
      * 保存附件  
      * @param part 邮件中多个组合体中的其中一个组合体  
-     * @param destDir  附件保存目录  
+     * @param dest  附件保存目录  
+     * @param files  文件名
      * @return 附件列表
      * @throws UnsupportedEncodingException UnsupportedEncodingException  
      * @throws MessagingException  MessagingException
+     * @throws FileNotFoundException  FileNotFoundException
+     * @throws IOException  IOException
      */  
     
-    public static List<String> downloadAttachment(Part part, String destDir,List<String> fileNMs) throws UnsupportedEncodingException, MessagingException,  
+    public static List<String> downloadAttachment(Part part, String dest,List<String> files) throws UnsupportedEncodingException, MessagingException,  
             FileNotFoundException, IOException {  
-    	if(BasicUtil.isEmpty(fileNMs)){
-    		fileNMs = new ArrayList<String>();
+    	if(BasicUtil.isEmpty(files)){
+    		files = new ArrayList<String>();
     	}
     	if (part.isMimeType("multipart/*")) {  
             Multipart multipart = (Multipart) part.getContent();    //复杂体邮件  
@@ -369,23 +372,23 @@ public class MailUtil {
                 String fileNM = decodeText(bodyPart.getFileName());;
                 if (disp != null && (disp.equalsIgnoreCase(Part.ATTACHMENT) || disp.equalsIgnoreCase(Part.INLINE))) {  
                     InputStream is = bodyPart.getInputStream();  
-                    result = saveFile(is, destDir,fileNM);  
+                    result = saveFile(is, dest,fileNM);  
                 } else if (bodyPart.isMimeType("multipart/*")) {  
-                	downloadAttachment(bodyPart,destDir,fileNMs);  
+                	downloadAttachment(bodyPart,dest,files);  
                 } else {  
                     String contentType = bodyPart.getContentType();  
                     if (contentType.indexOf("name") != -1 || contentType.indexOf("application") != -1) {  
-                        result = saveFile(bodyPart.getInputStream(),destDir,fileNM);  
+                        result = saveFile(bodyPart.getInputStream(),dest,fileNM);  
                     }  
                 }  
                 if(result){
-                	fileNMs.add(fileNM);
+                	files.add(fileNM);
                 }
             }  
         } else if (part.isMimeType("message/rfc822")) {  
-        	downloadAttachment((Part) part.getContent(),destDir,fileNMs);  
+        	downloadAttachment((Part) part.getContent(),dest,files);  
         }  
-    	return fileNMs;
+    	return files;
     }  
       
     /**  
