@@ -8,9 +8,9 @@
 		<version>2.0.6.835</version>
 	</parent>
 
-	<artifactId>anyboot-start-mvc</artifactId>
+	<artifactId>anyboot-start-mvc-jsp-mysql</artifactId>
 	<packaging>pom</packaging>
-	<name>anyboot-start-mvc</name>
+	<name>anyboot-start-mvc-jsp-mysql</name>
 
 	<dependencies>
 		
