@@ -18,5 +18,13 @@
 			<artifactId>anyboot-mvc</artifactId>
 			<version>${anyboot.mvc.version}</version>
 		</dependency>
+		
+		<!-- mysql -->
+		<dependency>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyboot-jdbc-mysql</artifactId>
+			<version>${anyboot.jdbc.mysql.version}</version>
+		</dependency>
+		<!-- end mysql -->
 	</dependencies>
 </project>
