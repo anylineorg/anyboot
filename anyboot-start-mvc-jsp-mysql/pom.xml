@@ -34,7 +34,6 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<version>${javax.jstl.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>taglibs</groupId>
