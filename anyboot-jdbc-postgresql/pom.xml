@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.anyline</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>2.1.6.835</version>
+		<version>2.1.7.835</version>
 	</parent>
 	
 	<artifactId>anyboot-jdbc-postgresql</artifactId>
