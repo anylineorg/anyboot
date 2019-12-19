@@ -139,7 +139,7 @@
 
 	<profiles>
 		<profile>
-			<id>sonatype</id>
+			<id>central</id>
 			<activation>
             	<activeByDefault>true</activeByDefault>
 			</activation>
