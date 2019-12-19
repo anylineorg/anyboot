@@ -11,7 +11,7 @@
 	
 	<groupId>org.anyline</groupId>
 	<artifactId>anyboot-dependency</artifactId>
-	<version>2.2.2.835</version>
+	<version>2.2.2.836</version>
 	<packaging>pom</packaging>
 	<name>AnyBoot</name>
 	<description>AnyLine针对SpringBoot环境的支持</description>
@@ -43,8 +43,8 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		
 		
-		<anyboot.version>2.2.2.835</anyboot.version>
-		<anyline.version>8.3.5</anyline.version>
+		<anyboot.version>2.2.2.836</anyboot.version>
+		<anyline.version>8.3.6</anyline.version>
         <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
 		
 		<anyboot.core.version>${anyboot.version}</anyboot.core.version>
