@@ -105,8 +105,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
             if (type == null) {
                 type = DATASOURCE_TYPE_DEFAULT;// 默认DataSource
             }
-            Class<? extends DataSource> dataSourceType;
-            dataSourceType = (Class<? extends DataSource>) Class.forName((String) type);
+            Class<? extends DataSource> dataSourceType = (Class<? extends DataSource>) Class.forName((String) type);
             String driverClassName = dataSourceMap.get("driver").toString();
             String url = dataSourceMap.get("url").toString();
             String username = dataSourceMap.get("username").toString();
