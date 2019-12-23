@@ -106,10 +106,10 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
                 type = DATASOURCE_TYPE_DEFAULT;// 默认DataSource
             }
             Class<? extends DataSource> dataSourceType = (Class<? extends DataSource>) Class.forName((String) type);
-            String driverClassName = dataSourceMap.get("driver").toString();
-            String url = dataSourceMap.get("url").toString();
-            String username = dataSourceMap.get("username").toString();
-            String password = dataSourceMap.get("password").toString();
+            String driverClassName = (String)dataSourceMap.get("driver");
+            String url = (String)dataSourceMap.get("url");
+            String username = (String)dataSourceMap.get("username");
+            String password = (String)dataSourceMap.get("password");
             // 自定义DataSource配置
             DataSourceBuilder<?> factory = DataSourceBuilder.create().driverClassName(driverClassName).url(url).username(username).password(password).type(dataSourceType);
             return factory.build();
