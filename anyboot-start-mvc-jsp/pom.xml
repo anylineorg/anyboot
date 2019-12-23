@@ -4,8 +4,8 @@
 
 	<parent>
 		<groupId>org.anyline</groupId>
-		<artifactId>anyboot-start</artifactId>
-		<version>2.2.2.836</version>
+		<artifactId>anyboot-dependency</artifactId>
+		<version>8.3.6.222</version>
 	</parent>
 
 	<artifactId>anyboot-start-mvc-jsp</artifactId>
@@ -13,14 +13,6 @@
 	<name>anyboot-start-mvc-jsp</name>
 
 	<dependencies>
-		<!-- 连接池 -->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>${druid.version}</version>
-		</dependency>
-		<!-- end 连接池 -->
-		
 		<!-- spring mvc -->
 		<dependency>
 			<groupId>org.anyline</groupId>
