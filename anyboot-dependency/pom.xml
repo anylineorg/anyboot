@@ -6,12 +6,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.2.RELEASE</version>
+		<version>2.1.1.RELEASE</version>
 	</parent>
 	
 	<groupId>org.anyline</groupId>
 	<artifactId>anyboot-dependency</artifactId>
-	<version>8.3.6.222</version>
+	<version>8.3.7.111</version>
 	<packaging>pom</packaging>
 	<name>AnyBoot</name>
 	<description>AnyLine针对SpringBoot环境的支持</description>
@@ -43,8 +43,8 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		
 		
-		<anyboot.version>8.3.6.222</anyboot.version>
-		<anyline.version>8.3.6</anyline.version>
+		<anyboot.version>8.3.7.111</anyboot.version>
+		<anyline.version>8.3.7</anyline.version>
         <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
 		
 		<anyboot.core.version>${anyboot.version}</anyboot.core.version>
@@ -67,6 +67,7 @@
 		<anyboot.redis.version>${anyboot.version}</anyboot.redis.version>
 		<anyboot.weixin.version>${anyboot.version}</anyboot.weixin.version>
 
+		<anyboot.jdbc.version>${anyboot.version}</anyboot.jdbc.version>
 		<anyboot.jdbc.mssql.version>${anyboot.version}</anyboot.jdbc.mssql.version>
 		<anyboot.jdbc.mysql.version>${anyboot.version}</anyboot.jdbc.mysql.version>
 		<anyboot.jdbc.db2.version>${anyboot.version}</anyboot.jdbc.db2.version>
@@ -94,6 +95,7 @@
 		<anyline.redis.version>${anyline.version}</anyline.redis.version>
 		<anyline.weixin.version>${anyline.version}</anyline.weixin.version>
 		
+		<anyline.jdbc.version>${anyline.version}</anyline.jdbc.version>
 		<anyline.jdbc.mssql.version>${anyline.version}</anyline.jdbc.mssql.version>
 		<anyline.jdbc.mysql.version>${anyline.version}</anyline.jdbc.mysql.version>
 		<anyline.jdbc.db2.version>${anyline.version}</anyline.jdbc.db2.version>
