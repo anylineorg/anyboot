@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.anyline</groupId>
+		<artifactId>anyboot-dependency</artifactId>
+		<version>8.3.7.111</version>
+	</parent>
+	
+	<artifactId>anyboot-jdbc</artifactId>
+	<name>anyboot-jdbc</name>
+	<packaging>jar</packaging>
+	<url>http://www.anyboot.org/jdbc</url>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-jdbc</artifactId>
+			<version>${anyline.jdbc.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- jdbcTemplate -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+	</dependencies>
+</project>
