@@ -6,7 +6,7 @@ import org.anyline.plugin.springmvc.TemplateView;
 import org.anyline.util.BasicUtil;
 import org.anyline.util.BeanUtil;
 import org.anyline.util.ConfigTable;
-import org.anyline.util.WebUtil;
+import org.anyline.web.util.WebUtil;
 
 public class TemplateController extends AnybootController{
 	/**
