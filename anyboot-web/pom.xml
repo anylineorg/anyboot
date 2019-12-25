@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.anyline</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.3.6.222</version>
+		<version>8.3.7.111</version>
 	</parent>
 	
 	<artifactId>anyboot-web</artifactId>
@@ -27,15 +27,14 @@
 			<version>${anyline.web.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyboot-jdbc</artifactId>
+			<version>${anyboot.jdbc.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 			<scope>compile</scope>
-		</dependency>
-		
-		<!-- jdbcTemplate -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 	</dependencies>
 </project>
