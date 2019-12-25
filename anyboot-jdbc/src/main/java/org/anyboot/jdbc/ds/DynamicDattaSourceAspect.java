@@ -1,7 +1,7 @@
-package org.anyboot.jdbc.config.db.ds;
+package org.anyboot.jdbc.ds;
 
-import org.anyline.jdbc.config.db.ds.DataSourceHolder;
-import org.anyline.jdbc.config.db.ds.TargetDataSource;
+import org.anyline.jdbc.ds.DataSourceHolder;
+import org.anyline.jdbc.ds.TargetDataSource;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;

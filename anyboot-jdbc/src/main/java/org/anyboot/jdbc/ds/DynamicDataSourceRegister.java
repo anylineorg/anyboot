@@ -1,12 +1,12 @@
-package org.anyboot.jdbc.config.db.ds;
+package org.anyboot.jdbc.ds;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.sql.DataSource;
 
-import org.anyline.jdbc.config.db.ds.DataSourceHolder;
-import org.anyline.jdbc.config.db.ds.DynamicDataSource;
+import org.anyline.jdbc.ds.DataSourceHolder;
+import org.anyline.jdbc.ds.DynamicDataSource;
 import org.anyline.util.BasicUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
