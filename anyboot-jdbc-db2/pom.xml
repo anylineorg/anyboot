@@ -19,7 +19,6 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-jdbc-db2</artifactId>
-			<version>${anyline.jdbc.db2.version}</version>
 		</dependency>
 	</dependencies>
 </project>
