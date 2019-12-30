@@ -19,7 +19,6 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-redis</artifactId>
-			<version>${anyline.redis.version}</version>
 		</dependency>
 	</dependencies>
 </project>
