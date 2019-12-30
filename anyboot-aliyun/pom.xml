@@ -19,12 +19,10 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-aliyun</artifactId>
-			<version>${anyline.aliyun.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jsp-api</artifactId>
-			<version>${javax.jsp.version}</version>
 			<scope>provided</scope>
 			<optional>true</optional>
 		</dependency>
