@@ -17,7 +17,6 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyboot-mvc</artifactId>
-			<version>${anyboot.mvc.version}</version>
 		</dependency>
 		<!-- end spring mvc -->
 		
@@ -33,7 +32,6 @@
 		<dependency>
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
-			<version>${taglibs.standard.version}</version>
 		</dependency>
 		<!-- end jsp -->
 		
@@ -41,7 +39,6 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyboot-jdbc-mysql</artifactId>
-			<version>${anyboot.jdbc.mysql.version}</version>
 		</dependency>
 		<!-- end mysql -->
 	</dependencies>
