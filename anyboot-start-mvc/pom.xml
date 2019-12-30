@@ -4,7 +4,7 @@
 
 	<parent>
 		<groupId>org.anyline</groupId>
-		<artifactId>anyboot-dependency</artifactId>
+		<artifactId>anyboot-start</artifactId>
 		<version>8.3.7.211</version>
 	</parent>
 

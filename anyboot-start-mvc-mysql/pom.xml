@@ -4,20 +4,15 @@
 
 	<parent>
 		<groupId>org.anyline</groupId>
-		<artifactId>anyboot-dependency</artifactId>
+		<artifactId>anyboot-start-mvc</artifactId>
 		<version>8.3.7.211</version>
 	</parent>
 
-	<artifactId>anyboot-start-mvc</artifactId>
+	<artifactId>anyboot-start-mvc-mysql</artifactId>
 	<packaging>pom</packaging>
 	<name>anyboot-start-mvc</name>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.anyline</groupId>
-			<artifactId>anyboot-mvc</artifactId>
-		</dependency>
-		
 		<!-- mysql -->
 		<dependency>
 			<groupId>org.anyline</groupId>
