@@ -38,8 +38,8 @@ public class TemplateController extends AnybootController{
 	/**
 	 * 创建显示视图
 	 * @param adapt 是否识别并切换 移动 PC(web,wap)
-	 * @param name
-	 * @param template
+	 * @param name name
+	 * @param template template
 	 * template(page,template) 与createView(page,template); 相同
 		需要注意的是
 		page有两种格式相对与绝对
