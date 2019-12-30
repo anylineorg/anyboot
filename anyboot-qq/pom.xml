@@ -19,7 +19,6 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-qq</artifactId>
-			<version>${anyline.qq.version}</version>
 		</dependency>
 	</dependencies>
 </project>
