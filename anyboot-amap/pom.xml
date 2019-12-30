@@ -19,7 +19,6 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-amap</artifactId>
-			<version>${anyline.amap.version}</version>
 		</dependency>
 	</dependencies>
 </project>
