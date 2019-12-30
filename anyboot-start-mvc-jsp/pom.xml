@@ -4,7 +4,7 @@
 
 	<parent>
 		<groupId>org.anyline</groupId>
-		<artifactId>anyboot-dependency</artifactId>
+		<artifactId>anyboot-start-mvc</artifactId>
 		<version>8.3.7.211</version>
 	</parent>
 
@@ -13,13 +13,6 @@
 	<name>anyboot-start-mvc-jsp</name>
 
 	<dependencies>
-		<!-- spring mvc -->
-		<dependency>
-			<groupId>org.anyline</groupId>
-			<artifactId>anyboot-mvc</artifactId>
-		</dependency>
-		<!-- end spring mvc -->
-		
 		<!-- jsp -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
