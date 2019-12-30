@@ -19,7 +19,6 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-jdbc-mssql</artifactId>
-			<version>${anyline.jdbc.mssql.version}</version>
 		</dependency>
 	</dependencies>
 </project>
