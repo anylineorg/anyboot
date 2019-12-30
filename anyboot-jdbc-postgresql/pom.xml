@@ -19,7 +19,6 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-jdbc-postgresql</artifactId>
-			<version>${anyline.jdbc.postgresql.version}</version>
 		</dependency>
 	</dependencies>
 </project>
