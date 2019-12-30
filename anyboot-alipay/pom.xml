@@ -19,12 +19,10 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyboot-core</artifactId>
-			<version>${anyboot.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-alipay</artifactId>
-			<version>${anyline.alipay.version}</version>
 		</dependency>
 	</dependencies>
 	
