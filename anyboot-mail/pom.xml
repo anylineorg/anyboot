@@ -18,7 +18,6 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-mail</artifactId>
-			<version>${anyline.mail.version}</version>
 		</dependency>
 	</dependencies>
 </project>
