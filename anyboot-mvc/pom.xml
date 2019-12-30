@@ -18,12 +18,10 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyboot-web</artifactId>
-			<version>${anyboot.web.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-mvc</artifactId>
-			<version>${anyline.mvc.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -34,7 +32,6 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jsp-api</artifactId>
-			<version>${javax.jsp.version}</version>
 			<scope>provided</scope>
 			<optional>true</optional>
 		</dependency>
