@@ -43,8 +43,18 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         if(BasicUtil.isEmpty(driver)){
         	driver = env.getProperty("spring.datasource.driver-class-name");
         }
+        if(BasicUtil.isEmpty(driver)){
+        	driver = env.getProperty("spring.datasource.driverClassName");
+        }
         dsMap.put("driver", driver);
-        dsMap.put("url", env.getProperty("spring.datasource.url"));
+        String url = env.getProperty("spring.datasource.url");
+        if(BasicUtil.isEmpty(url)){
+        	url = env.getProperty("spring.datasource.jdbc-url");
+        }
+        if(BasicUtil.isEmpty(url)){
+        	url = env.getProperty("spring.datasource.jdbcUrl");
+        }
+        dsMap.put("url", url);
         dsMap.put("username", env.getProperty("spring.datasource.username"));
         dsMap.put("password", env.getProperty("spring.datasource.password"));
         defaultDataSource = buildDataSource(dsMap);
@@ -58,21 +68,29 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 	        for (String prefix : prefixs.split(",")) {
 	            // 多个数据源
 	            Map<String, Object> dsMap = new HashMap<>();
+	            String type = env.getProperty("spring.datasource." + prefix + ".type");
+	            dsMap.put("type", type);
 	            String driver = env.getProperty("spring.datasource." + prefix + ".driver");
 	            if(BasicUtil.isEmpty(driver)){
-	            	env.getProperty("spring.datasource." + prefix + ".driver-class-name");
+	            	driver = env.getProperty("spring.datasource." + prefix + ".driver-class-name");
+	            }
+	            if(BasicUtil.isEmpty(driver)){
+	            	driver = env.getProperty("spring.datasource." + prefix + ".driverClassName");
 	            }
 	            dsMap.put("driver", driver);
 	            String url = env.getProperty("spring.datasource." + prefix + ".url");
-	            if(BasicUtil.isEmpty(driver)){
-	            	env.getProperty("spring.datasource." + prefix + ".jdbc-url");
+	            if(BasicUtil.isEmpty(url)){
+	            	url = env.getProperty("spring.datasource." + prefix + ".jdbc-url");
+	            }
+	            if(BasicUtil.isEmpty(url)){
+	            	url = env.getProperty("spring.datasource." + prefix + ".jdbcUrl");
 	            }
 	            dsMap.put("url", url);
 	            dsMap.put("username", env.getProperty("spring.datasource." + prefix + ".username"));
 	            dsMap.put("password", env.getProperty("spring.datasource." + prefix + ".password"));
 	            DataSource ds = buildDataSource(dsMap);
 	            springDataSources.put(prefix, ds);
-	        	log.warn("[注册数据源][数据源:default]");
+	        	log.warn("[注册数据源][key:{},type:{},driver:{},url:{}]",prefix, type, driver, url);
 	        }
         }
     }
@@ -86,7 +104,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         //添加其他数据源
         targetDataSources.putAll(springDataSources);
         for (String key : springDataSources.keySet()) {
-        	log.warn("[注册数据源][数据源:{}]",key);
+        	log.warn("[注册数据源][key:{}]",key);
         	DataSourceHolder.reg(key);
         }
 
@@ -115,7 +133,12 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
             String username = (String)dataSourceMap.get("username");
             String password = (String)dataSourceMap.get("password");
             // 自定义DataSource配置
-            DataSourceBuilder<?> factory = DataSourceBuilder.create().driverClassName(driverClassName).url(url).username(username).password(password).type(dataSourceType);
+            DataSourceBuilder<?> factory = DataSourceBuilder.create()
+            		.driverClassName(driverClassName)
+            		.url(url)
+            		.username(username)
+            		.password(password)
+            		.type(dataSourceType);
             return factory.build();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
