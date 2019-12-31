@@ -90,7 +90,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 	            dsMap.put("password", env.getProperty("spring.datasource." + prefix + ".password"));
 	            DataSource ds = buildDataSource(dsMap);
 	            springDataSources.put(prefix, ds);
-	        	log.warn("[注册数据源][key:{},type:{},driver:{},url:{}]",prefix, type, driver, url);
+	        	log.warn("[创建数据源][key:{},type:{},driver:{},url:{}]",prefix, type, driver, url);
 	        }
         }
     }
