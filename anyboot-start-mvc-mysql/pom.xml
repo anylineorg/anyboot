@@ -16,7 +16,7 @@
 		<!-- mysql -->
 		<dependency>
 			<groupId>org.anyline</groupId>
-			<artifactId>anyboot-jdbc-mysql</artifactId>
+			<artifactId>anyline-jdbc-mysql</artifactId>
 		</dependency>
 		<!-- end mysql -->
 	</dependencies>
