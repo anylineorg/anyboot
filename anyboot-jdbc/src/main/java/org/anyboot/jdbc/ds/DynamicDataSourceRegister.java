@@ -63,7 +63,11 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 	            	env.getProperty("spring.datasource." + prefix + ".driver-class-name");
 	            }
 	            dsMap.put("driver", driver);
-	            dsMap.put("url", env.getProperty("spring.datasource." + prefix + ".url"));
+	            String url = env.getProperty("spring.datasource." + prefix + ".url");
+	            if(BasicUtil.isEmpty(driver)){
+	            	env.getProperty("spring.datasource." + prefix + ".jdbc-url");
+	            }
+	            dsMap.put("url", url);
 	            dsMap.put("username", env.getProperty("spring.datasource." + prefix + ".username"));
 	            dsMap.put("password", env.getProperty("spring.datasource." + prefix + ".password"));
 	            DataSource ds = buildDataSource(dsMap);
