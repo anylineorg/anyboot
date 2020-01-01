@@ -4,14 +4,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.3.RELEASE</version>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-parent</artifactId>
+	    <version>2.1.5.RELEASE</version>
 	</parent>
 	
 	<groupId>org.anyline</groupId>
 	<artifactId>anyboot-dependency</artifactId>
-	<version>8.3.7.213</version>
+	<version>8.3.7.221</version>
 	<packaging>pom</packaging>
 	<name>AnyBoot</name>
 	<description>AnyLine针对SpringBoot环境的支持</description>
@@ -42,7 +42,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		
-		<anyboot.version>8.3.7.213</anyboot.version>
+		<anyboot.version>8.3.7.221</anyboot.version>
 		<anyline.version>8.3.7</anyline.version>
         <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
 		
@@ -116,10 +116,17 @@
 		<taglibs.standard.version>1.1.2</taglibs.standard.version>
 		<javax.mail.version>1.5.0-b01</javax.mail.version>
 
+		<!-- <slf4j.version>1.7.25</slf4j.version>
+		<slf4j.version>1.7.30</slf4j.version> 
+		-->
 		<slf4j.version>1.7.25</slf4j.version>
 		<logback.version>1.2.3</logback.version>
 		<json.version>2.4</json.version>
 		<dom4j.version>2.1.1</dom4j.version>
+		<!--<dom4j.version>2.1.1</dom4j.version>
+		<dom4j.version>1.6.1</dom4j.version>
+		-->
+		
 		<commons.net.version>3.6</commons.net.version>
 		<commons.io.version>2.6</commons.io.version>
 		<commons.httpclient.version>3.1</commons.httpclient.version>
@@ -742,16 +749,32 @@
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
+
+    <repositories>
         <repository>
-            <id>anyline-repos</id>
-            <name>AnyLine Repository</name>
-            <url>http://maven.anyline.org/repository/maven-public</url>  
-            <releases>
-                <enabled>true</enabled>
-            </releases>
+            <id>aliyun</id>
+            <name>aliyun repository</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>anyline</id>
+            <name>anyline repository</name>
+            <url>http://maven.anyline.org/repository/maven-public</url>
+        </repository>
+        <repository>
+            <id>spring-milestone</id>
+            <name>Spring Milestone</name>
+            <url>https://repo.spring.io/milestone</url>
             <snapshots>
                 <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-snapshot</id>
+            <name>Spring Snapshot</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
             </snapshots>
         </repository>
     </repositories>
