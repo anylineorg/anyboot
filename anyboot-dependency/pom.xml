@@ -42,7 +42,6 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		
-		
 		<anyboot.version>8.3.7.213</anyboot.version>
 		<anyline.version>8.3.7</anyline.version>
         <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
@@ -743,5 +742,18 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+        <repository>
+            <id>anyline-repos</id>
+            <name>AnyLine Repository</name>
+            <url>http://maven.anyline.org/repository/maven-public</url>  
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
 
