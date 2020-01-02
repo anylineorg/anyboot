@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.anyline</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.3.7.221</version>
+		<version>8.3.7.215</version>
 	</parent>
 
 	<artifactId>anyboot-start</artifactId>
@@ -13,12 +13,10 @@
 	<name>anyboot-start</name>
 	
 	<dependencies>
-		<!-- ml或properties配置文件解析 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 		</dependency>
-		<!-- aop 动态数据源 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
@@ -49,7 +47,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- 自动热部署 -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin </artifactId>

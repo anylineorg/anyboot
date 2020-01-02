@@ -3,11 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	
 	<parent>
 		<groupId>org.anyline</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.3.7.221</version>
+		<version>8.3.7.215</version>
 	</parent>
 	
 	<artifactId>anyboot-jdbc</artifactId>
@@ -15,16 +14,21 @@
 	<packaging>jar</packaging>
 	<url>http://www.anyboot.org/jdbc</url>
 
+	<dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.anyline</groupId>
+				<artifactId>anyboot-dependency</artifactId>
+				<version>8.3.7.215</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-jdbc</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-jdbc</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
