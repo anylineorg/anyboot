@@ -13,6 +13,7 @@ public class TemplateController extends AnybootController{
 	 * 根据dir构造文件目录(super.dir+this.dir)
 	 * @return return
 	 */
+	@SuppressWarnings("rawtypes")
 	protected String buildDir(){
 		String result = "";
 		try {
