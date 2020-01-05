@@ -102,32 +102,29 @@
 		<anyline.jdbc.postgresql.version>${anyline.version}</anyline.jdbc.postgresql.version>
 		<anyline.jdbc.hgdb.version>${anyline.version}</anyline.jdbc.hgdb.version>
 		
-		<mssql-jdbc.version>7.2.2.jre8</mssql-jdbc.version>
-		<mysql.version>5.1.24</mysql.version>
+		<!-- <mssql-jdbc.version>7.2.2.jre8</mssql-jdbc.version> -->
 		<db2-jdbc.version>11.5.0.0</db2-jdbc.version>
 		<ojdbc.version>19.3.0.0</ojdbc.version><!-- oracle -->
-		<postgresql.version>42.2.8</postgresql.version>
+		<!-- <postgresql.version>42.2.8</postgresql.version> -->
 		<hgdb.version>4.0-jdbc42</hgdb.version>
-		<mariadb.version>2.4.4</mariadb.version>
+		<!-- <mariadb.version>2.4.4</mariadb.version> -->
 		<javax.servlet.version>4.0.0</javax.servlet.version>
 		<javax.jsp.version>2.0</javax.jsp.version>
-		<javax.jstl.version>1.1.2</javax.jstl.version>
 		<taglibs.standard.version>1.1.2</taglibs.standard.version>
 		<javax.mail.version>1.5.0-b01</javax.mail.version>
 		<fastjson.version>1.2.62</fastjson.version>
-		<logback.version>1.2.3</logback.version>
+		<!-- <logback.version>1.2.3</logback.version> -->
 		<json.version>2.4</json.version>
-		<dom4j.version>2.1.1</dom4j.version>
+		<!-- <dom4j.version>2.1.1</dom4j.version> -->
 		<commons.net.version>3.6</commons.net.version>
 		<commons.io.version>2.6</commons.io.version>
-		<commons.httpclient.version>3.1</commons.httpclient.version>
+		<!-- <commons.httpclient.version>3.1</commons.httpclient.version> -->
 		<apache.httpcomponents.version>4.5</apache.httpcomponents.version>
-		<apache.struts.version>2.3.24.1</apache.struts.version>
 		<oro.version>2.0.8</oro.version>
 		<ecache.version>2.10.6</ecache.version>
 		<ognl.version>3.2.10</ognl.version>
-		<slf4j.version>1.7.25</slf4j.version>
-		<spring.version>4.3.23.RELEASE</spring.version>
+		<!-- <slf4j.version>1.7.25</slf4j.version> -->
+		<!-- <spring.version>4.3.23.RELEASE</spring.version> -->
 		<aliyun.oss.version>3.8.0</aliyun.oss.version>
 		<aliyun.sms.version>2.1.0</aliyun.sms.version>
 		<alipay.version>3.7.26.ALL</alipay.version>
@@ -274,125 +271,10 @@
 				<version>${anyboot.weixin.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.ibm.db2</groupId>
-				<artifactId>jcc</artifactId>
-				<version>${db2-jdbc.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.hgdb</groupId>
-				<artifactId>hgdb</artifactId>
-				<version>${hgdb.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mariadb.jdbc</groupId>
-				<artifactId>mariadb-java-client</artifactId>
-				<version>${mariadb.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.microsoft.sqlserver</groupId>
-				<artifactId>mssql-jdbc</artifactId>
-				<version>${mssql-jdbc.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>${mysql.version}</version>
-			</dependency> 
-			<dependency>
-				<groupId>org.postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-				<version>${postgresql.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>cn.jpush.api</groupId>
-				<artifactId>jiguang-common</artifactId>
-				<version>${jpush.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>cn.jpush.api</groupId>
-				<artifactId>jpush-client</artifactId>
-				<version>${jpush.client.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.mail</groupId>
-				<artifactId>mail</artifactId>
-				<version>${javax.mail.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>org.springframework</groupId>
-				<artifactId>spring-webmvc</artifactId>
+				<artifactId>spring-jdbc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>${javax.servlet.version}</version>
-				<scope>provided</scope>
-				<optional>true</optional>
-			</dependency>
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>jsp-api</artifactId>
-				<version>${javax.jsp.version}</version>
-				<scope>provided</scope>
-				<optional>true</optional>
-			</dependency>
-			<dependency>
-				<groupId>commons-net</groupId>
-				<artifactId>commons-net</artifactId>
-				<version>${commons.net.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.httpcomponents</groupId>
-				<artifactId>httpclient</artifactId>
-				<version>${apache.httpcomponents.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.httpcomponents</groupId>
-				<artifactId>httpmime</artifactId>
-				<version>${apache.httpcomponents.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-httpclient</groupId>
-				<artifactId>commons-httpclient</artifactId>
-				<version>${commons.httpclient.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.jcraft</groupId>
-				<artifactId>jsch</artifactId>
-				<version>${jsch.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.struts</groupId>
-				<artifactId>struts2-core</artifactId>
-				<version>${apache.struts.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.struts</groupId>
-				<artifactId>struts2-spring-plugin</artifactId>
-				<version>${apache.struts.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.struts</groupId>
-				<artifactId>struts2-convention-plugin</artifactId>
-				<version>${apache.struts.version}</version>
-			</dependency>   
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>${spring.version}</version>
-			</dependency>  
-			<dependency>
-				<groupId>com.aliyun.oss</groupId>
-				<artifactId>aliyun-sdk-oss</artifactId>
-				<version>${aliyun.oss.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.aliyun</groupId>
-				<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
-				<version>${aliyun.sms.version}</version>
-			</dependency>
-			
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
@@ -400,97 +282,15 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
-				<artifactId>spring-jdbc</artifactId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>  
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>net.sf.ehcache</groupId>
-				<artifactId>ehcache</artifactId>
-				<version>${ecache.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>ognl</groupId>
-				<artifactId>ognl</artifactId>
-				<version>${ognl.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.alipay.sdk</groupId>
-				<artifactId>alipay-sdk-java</artifactId>
-				<version>${alipay.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-core</artifactId>
-				<version>${logback.version}</version>
-			</dependency>
-	
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-classic</artifactId>
-				<version>${logback.version}</version>
-			</dependency>
-	
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-access</artifactId>
-				<version>${logback.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>net.sf.json-lib</groupId>
-				<artifactId>json-lib</artifactId>
-				<version>${json.version}</version>
-				<classifier>jdk15</classifier>
-			</dependency>
-			<dependency>
-				<groupId>org.dom4j</groupId>
-				<artifactId>dom4j</artifactId>
-				<version>${dom4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.oro</groupId>
-				<artifactId>com.springsource.org.apache.oro</artifactId>
-				<version>${oro.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-io</groupId>
-				<artifactId>commons-io</artifactId>
-				<version>${commons.io.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.persistence</groupId>
-				<artifactId>persistence-api</artifactId>
-				<version>${persistence.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>jstl</artifactId>
-				<version>${javax.jstl.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>taglibs</groupId>
-				<artifactId>standard</artifactId>
-				<version>${taglibs.standard.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.alibaba.nacos</groupId>
-				<artifactId>nacos-client</artifactId>
-				<version>${alibaba.nacos.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>fastjson</artifactId>
-				<version>${fastjson.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid</artifactId>
-				<version>${druid.version}</version>
-			</dependency>
+			
 		</dependencies>
 	</dependencyManagement>
 	<profiles>
