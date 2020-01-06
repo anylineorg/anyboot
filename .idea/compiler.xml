@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="anyboot-mail" />
+        <module name="anyboot-weixin" />
+        <module name="anyboot-jdbc-postgresql" />
+        <module name="anyboot-net" />
+        <module name="anyboot-web-ext" />
+        <module name="anyboot-easemob" />
+        <module name="anyboot-ext" />
+        <module name="anyboot-jdbc-mysql" />
+        <module name="anyboot-video" />
+        <module name="anyboot-jpush" />
+        <module name="anyboot-aliyun" />
+        <module name="anyboot-jdbc-mssql" />
+        <module name="anyboot-mvc" />
+        <module name="anyboot-nc" />
+        <module name="anyboot-web" />
+        <module name="anyboot-qq" />
+        <module name="anyboot-core" />
+        <module name="anyboot-jdbc" />
+        <module name="anyboot-jdbc-hgdb" />
+        <module name="anyboot-jdbc-db2" />
+        <module name="anyboot-redis" />
+        <module name="anyboot-jdbc-oracle" />
+        <module name="anyboot-amap" />
+        <module name="anyboot-alipay" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="anyboot" target="1.7" />
+      <module name="anyboot-alipay" target="1.7" />
+      <module name="anyboot-aliyun" target="1.7" />
+      <module name="anyboot-amap" target="1.7" />
+      <module name="anyboot-core" target="1.7" />
+      <module name="anyboot-dependency" target="1.7" />
+      <module name="anyboot-easemob" target="1.7" />
+      <module name="anyboot-ext" target="1.7" />
+      <module name="anyboot-jdbc" target="1.7" />
+      <module name="anyboot-jdbc-db2" target="1.7" />
+      <module name="anyboot-jdbc-hgdb" target="1.7" />
+      <module name="anyboot-jdbc-mssql" target="1.7" />
+      <module name="anyboot-jdbc-mysql" target="1.7" />
+      <module name="anyboot-jdbc-oracle" target="1.7" />
+      <module name="anyboot-jdbc-postgresql" target="1.7" />
+      <module name="anyboot-jpush" target="1.7" />
+      <module name="anyboot-mail" target="1.7" />
+      <module name="anyboot-mvc" target="1.7" />
+      <module name="anyboot-nc" target="1.7" />
+      <module name="anyboot-net" target="1.7" />
+      <module name="anyboot-qq" target="1.7" />
+      <module name="anyboot-redis" target="1.7" />
+      <module name="anyboot-start" target="1.8" />
+      <module name="anyboot-start-mvc" target="1.8" />
+      <module name="anyboot-start-mvc-jsp" target="1.8" />
+      <module name="anyboot-start-mvc-jsp-mysql" target="1.8" />
+      <module name="anyboot-start-mvc-mysql" target="1.8" />
+      <module name="anyboot-video" target="1.7" />
+      <module name="anyboot-web" target="1.7" />
+      <module name="anyboot-web-ext" target="1.7" />
+      <module name="anyboot-weixin" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="anyboot-alipay" options="-parameters" />
+      <module name="anyboot-aliyun" options="-parameters" />
+      <module name="anyboot-amap" options="-parameters" />
+      <module name="anyboot-core" options="-parameters" />
+      <module name="anyboot-easemob" options="-parameters" />
+      <module name="anyboot-ext" options="-parameters" />
+      <module name="anyboot-jdbc" options="-parameters" />
+      <module name="anyboot-jdbc-db2" options="-parameters" />
+      <module name="anyboot-jdbc-hgdb" options="-parameters" />
+      <module name="anyboot-jdbc-mssql" options="-parameters" />
+      <module name="anyboot-jdbc-mysql" options="-parameters" />
+      <module name="anyboot-jdbc-oracle" options="-parameters" />
+      <module name="anyboot-jdbc-postgresql" options="-parameters" />
+      <module name="anyboot-jpush" options="-parameters" />
+      <module name="anyboot-mail" options="-parameters" />
+      <module name="anyboot-mvc" options="-parameters" />
+      <module name="anyboot-nc" options="-parameters" />
+      <module name="anyboot-net" options="-parameters" />
+      <module name="anyboot-qq" options="-parameters" />
+      <module name="anyboot-redis" options="-parameters" />
+      <module name="anyboot-video" options="-parameters" />
+      <module name="anyboot-web" options="-parameters" />
+      <module name="anyboot-web-ext" options="-parameters" />
+      <module name="anyboot-weixin" options="-parameters" />
+    </option>
+  </component>
+</project>

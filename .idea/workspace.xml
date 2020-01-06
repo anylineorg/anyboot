@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b8ab13b5-d1bd-4de8-a6de-665e27a19f4c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/git.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-alipay/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-aliyun/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-amap/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-core/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-dependency/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-easemob/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-ext/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-db2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-hgdb/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-mssql/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-mysql/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-oracle/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-postgresql/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-jdbc/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-jpush/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-mail/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-mvc/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-nc/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-net/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-qq/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-redis/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-start-mvc-jsp-mysql/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-start-mvc-jsp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-start-mvc-mysql/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-start-mvc/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-start/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-video/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-web-ext/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anyboot-weixin/.gitignore" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-web/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-mail/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-jpush/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-qq/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-dependency/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-start-mvc-jsp/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-alipay/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-redis/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-jdbc/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-aliyun/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-jdbc-hgdb/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-jdbc-mysql/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-start-mvc/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-nc/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-jdbc-postgresql/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-video/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-mvc/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-core/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-jdbc-mssql/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-net/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-start/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-start-mvc-jsp-mysql/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-weixin/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-amap/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-jdbc-db2/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-ext/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-jdbc-oracle/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-web-ext/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-start-mvc-mysql/target/" />
+    <ignored path="$PROJECT_DIR$/anyboot-easemob/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/git.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>1.0.1-SNAPSHOT</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>8.3.7.215</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/anyboot-dependency/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/anyboot-alipay/pom.xml" />
+        <option value="$PROJECT_DIR$/anyboot-aliyun/pom.xml" />
+        <option value="$PROJECT_DIR$/anyboot-amap/pom.xml" />
+        <option value="$PROJECT_DIR$/anyboot-alipay/.gitignore" />
+        <option value="$PROJECT_DIR$/git.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\develop\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="443" />
+    <option name="y" value="31" />
+    <option name="width" value="1440" />
+    <option name="height" value="828" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="anyboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anyboot" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\develop\git\anyboot" />
+      <recent name="D:\develop\git\anyboot\anyboot-redis" />
+      <recent name="D:\develop\git\anyboot\anyboot-qq" />
+      <recent name="D:\develop\git\anyboot\anyboot-net" />
+      <recent name="D:\develop\git\anyboot\anyboot-nc" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8ab13b5-d1bd-4de8-a6de-665e27a19f4c" name="Default Changelist" comment="" />
+      <created>1578274833277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578274833277</updated>
+      <workItem from="1578274834788" duration="4726000" />
+    </task>
+    <task id="LOCAL-00001" summary="modules">
+      <created>1578275172323</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578275172323</updated>
+    </task>
+    <task id="LOCAL-00002" summary="clear">
+      <created>1578291768204</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578291768204</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4726000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="JRebel" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Designer" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" weight="0.3295325" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3295325" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="JRebel Console" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3295325" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295325" />
+      <window_info anchor="right" id="Maven" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modules" />
+    <MESSAGE value="clear" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/anyboot-dependency/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="18" selection-start-line="18" selection-end-line="36" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-ext/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-start-mvc-jsp-mysql/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-start-mvc-jsp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-net/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml.versionsBackup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-alipay/pom.xml.versionsBackup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-alipay/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-aliyun/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-amap/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-alipay/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-aliyun/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-amap/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-core/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-dependency/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-easemob/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-ext/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-jdbc/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-jdbc-db2/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-jdbc-hgdb/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-jdbc-mssql/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-jdbc-mysql/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-jdbc-oracle/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-jdbc-postgresql/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-jpush/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-mail/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-mvc/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-nc/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-net/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-qq/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anyboot-redis/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>anyboot</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
