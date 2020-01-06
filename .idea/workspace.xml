@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8ab13b5-d1bd-4de8-a6de-665e27a19f4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/git.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-alipay/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-aliyun/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-amap/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-core/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-dependency/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-easemob/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-ext/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-db2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-hgdb/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-mssql/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-mysql/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-oracle/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-jdbc-postgresql/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-jdbc/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-jpush/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-mail/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-mvc/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-nc/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-net/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-qq/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-redis/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-start-mvc-jsp-mysql/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-start-mvc-jsp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-start-mvc-mysql/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-start-mvc/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-start/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-video/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-web-ext/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anyboot-weixin/.gitignore" beforeDir="false" />
-    </list>
+    <list default="true" id="b8ab13b5-d1bd-4de8-a6de-665e27a19f4c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/anyboot-web/target/" />
     <ignored path="$PROJECT_DIR$/anyboot-mail/target/" />
@@ -81,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/git.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <caret line="11" column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -147,6 +115,26 @@
               <item name="anyboot" type="b2602c69:ProjectViewProjectNode" />
               <item name="anyboot" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="anyboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anyboot" type="462c0819:PsiDirectoryNode" />
+              <item name="anyboot-alipay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="anyboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anyboot" type="462c0819:PsiDirectoryNode" />
+              <item name="anyboot-aliyun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="anyboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anyboot" type="462c0819:PsiDirectoryNode" />
+              <item name="anyboot-amap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="anyboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anyboot" type="462c0819:PsiDirectoryNode" />
+              <item name="anyboot-jdbc" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -196,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578274833277</updated>
-      <workItem from="1578274834788" duration="4726000" />
+      <workItem from="1578274834788" duration="5371000" />
     </task>
     <task id="LOCAL-00001" summary="modules">
       <created>1578275172323</created>
@@ -216,7 +204,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4726000" />
+    <option name="totallyTimeSpent" value="5371000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -228,7 +216,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1035" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="JRebel" side_tool="true" />
@@ -427,7 +415,7 @@
     <entry file="file://$PROJECT_DIR$/git.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="11" column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
