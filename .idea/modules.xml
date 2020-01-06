@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/anyboot.iml" filepath="$PROJECT_DIR$/.idea/anyboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-alipay/anyboot-alipay.iml" filepath="$PROJECT_DIR$/anyboot-alipay/anyboot-alipay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-aliyun/anyboot-aliyun.iml" filepath="$PROJECT_DIR$/anyboot-aliyun/anyboot-aliyun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-amap/anyboot-amap.iml" filepath="$PROJECT_DIR$/anyboot-amap/anyboot-amap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-core/anyboot-core.iml" filepath="$PROJECT_DIR$/anyboot-core/anyboot-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-dependency/anyboot-dependency.iml" filepath="$PROJECT_DIR$/anyboot-dependency/anyboot-dependency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-easemob/anyboot-easemob.iml" filepath="$PROJECT_DIR$/anyboot-easemob/anyboot-easemob.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-ext/anyboot-ext.iml" filepath="$PROJECT_DIR$/anyboot-ext/anyboot-ext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-jdbc/anyboot-jdbc.iml" filepath="$PROJECT_DIR$/anyboot-jdbc/anyboot-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-jdbc-db2/anyboot-jdbc-db2.iml" filepath="$PROJECT_DIR$/anyboot-jdbc-db2/anyboot-jdbc-db2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-jdbc-hgdb/anyboot-jdbc-hgdb.iml" filepath="$PROJECT_DIR$/anyboot-jdbc-hgdb/anyboot-jdbc-hgdb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-jdbc-mssql/anyboot-jdbc-mssql.iml" filepath="$PROJECT_DIR$/anyboot-jdbc-mssql/anyboot-jdbc-mssql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-jdbc-mysql/anyboot-jdbc-mysql.iml" filepath="$PROJECT_DIR$/anyboot-jdbc-mysql/anyboot-jdbc-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-jdbc-oracle/anyboot-jdbc-oracle.iml" filepath="$PROJECT_DIR$/anyboot-jdbc-oracle/anyboot-jdbc-oracle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-jdbc-postgresql/anyboot-jdbc-postgresql.iml" filepath="$PROJECT_DIR$/anyboot-jdbc-postgresql/anyboot-jdbc-postgresql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-jpush/anyboot-jpush.iml" filepath="$PROJECT_DIR$/anyboot-jpush/anyboot-jpush.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-mail/anyboot-mail.iml" filepath="$PROJECT_DIR$/anyboot-mail/anyboot-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-mvc/anyboot-mvc.iml" filepath="$PROJECT_DIR$/anyboot-mvc/anyboot-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-nc/anyboot-nc.iml" filepath="$PROJECT_DIR$/anyboot-nc/anyboot-nc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-net/anyboot-net.iml" filepath="$PROJECT_DIR$/anyboot-net/anyboot-net.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-qq/anyboot-qq.iml" filepath="$PROJECT_DIR$/anyboot-qq/anyboot-qq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-redis/anyboot-redis.iml" filepath="$PROJECT_DIR$/anyboot-redis/anyboot-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-start/anyboot-start.iml" filepath="$PROJECT_DIR$/anyboot-start/anyboot-start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-start-mvc/anyboot-start-mvc.iml" filepath="$PROJECT_DIR$/anyboot-start-mvc/anyboot-start-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-start-mvc-jsp/anyboot-start-mvc-jsp.iml" filepath="$PROJECT_DIR$/anyboot-start-mvc-jsp/anyboot-start-mvc-jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-start-mvc-jsp-mysql/anyboot-start-mvc-jsp-mysql.iml" filepath="$PROJECT_DIR$/anyboot-start-mvc-jsp-mysql/anyboot-start-mvc-jsp-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-start-mvc-mysql/anyboot-start-mvc-mysql.iml" filepath="$PROJECT_DIR$/anyboot-start-mvc-mysql/anyboot-start-mvc-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-video/anyboot-video.iml" filepath="$PROJECT_DIR$/anyboot-video/anyboot-video.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-web/anyboot-web.iml" filepath="$PROJECT_DIR$/anyboot-web/anyboot-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-web-ext/anyboot-web-ext.iml" filepath="$PROJECT_DIR$/anyboot-web-ext/anyboot-web-ext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyboot-weixin/anyboot-weixin.iml" filepath="$PROJECT_DIR$/anyboot-weixin/anyboot-weixin.iml" />
+    </modules>
+  </component>
+</project>

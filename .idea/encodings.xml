@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/anyboot-alipay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-aliyun" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-amap" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-dependency" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-easemob" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-ext" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-jdbc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-jdbc-db2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-jdbc-hgdb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-jdbc-mssql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-jdbc-mysql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-jdbc-oracle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-jdbc-postgresql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-jpush" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-mail" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-mvc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-nc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-net" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-qq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-start" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-start-mvc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-start-mvc-jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-start-mvc-jsp-mysql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-start-mvc-mysql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-video" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-web-ext" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anyboot-weixin" charset="UTF-8" />
+  </component>
+</project>
