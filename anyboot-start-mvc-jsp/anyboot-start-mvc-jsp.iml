@@ -20,9 +20,15 @@
     <orderEntry type="library" name="Maven: org.anyline:anyline-web:8.3.7" level="project" />
     <orderEntry type="library" name="Maven: org.anyline:anyline-core:8.3.7" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-access:1.2.3" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.5" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.5" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.5" level="project" />
+=======
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.1" level="project" />
+>>>>>>> 7dd2870b77c372dda4b95437258ae97bd431f390
     <orderEntry type="library" name="Maven: org.dom4j:dom4j:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.oro:com.springsource.org.apache.oro:2.0.8" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.6" level="project" />
