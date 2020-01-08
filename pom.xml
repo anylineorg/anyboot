@@ -27,27 +27,8 @@
 		<url>https://github.com/anyboot/anyboot</url>
 	</scm>
     <modules>
-		<module>anyboot-alipay</module>
-		<module>anyboot-aliyun</module>
-		<module>anyboot-amap</module>
-		<module>anyboot-core</module>
 		<module>anyboot-dependency</module>
-		<module>anyboot-easemob</module>
-		<module>anyboot-ext</module>
 		<module>anyboot-jdbc</module>
-		<module>anyboot-jdbc-db2</module>
-		<module>anyboot-jdbc-hgdb</module>
-		<module>anyboot-jdbc-mssql</module>
-		<module>anyboot-jdbc-mysql</module>
-		<module>anyboot-jdbc-oracle</module>
-		<module>anyboot-jdbc-postgresql</module>
-		<module>anyboot-jpush</module>
-		<module>anyboot-mail</module>
-		<module>anyboot-mvc</module>
-		<module>anyboot-nc</module>
-		<module>anyboot-net</module>
-		<module>anyboot-qq</module>
-		<module>anyboot-redis</module>
 		<module>anyboot-start</module>
 		<module>anyboot-start-mvc</module>
 		<module>anyboot-start-mvc-jsp</module>
