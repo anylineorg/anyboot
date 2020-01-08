@@ -6,21 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="anyboot-web" />
         <module name="anyboot-mail" />
-        <module name="anyboot-weixin" />
         <module name="anyboot-jdbc-postgresql" />
-        <module name="anyboot-net" />
         <module name="anyboot-web-ext" />
+        <module name="anyboot-amap" />
         <module name="anyboot-easemob" />
         <module name="anyboot-ext" />
-        <module name="anyboot-jdbc-mysql" />
-        <module name="anyboot-video" />
-        <module name="anyboot-jpush" />
-        <module name="anyboot-aliyun" />
-        <module name="anyboot-jdbc-mssql" />
+        <module name="anyboot-net" />
         <module name="anyboot-mvc" />
+        <module name="anyboot-jdbc-mssql" />
+        <module name="anyboot-jdbc-mysql" />
         <module name="anyboot-nc" />
-        <module name="anyboot-web" />
+        <module name="anyboot-jpush" />
         <module name="anyboot-qq" />
         <module name="anyboot-core" />
         <module name="anyboot-jdbc" />
@@ -28,8 +26,8 @@
         <module name="anyboot-jdbc-db2" />
         <module name="anyboot-redis" />
         <module name="anyboot-jdbc-oracle" />
-        <module name="anyboot-amap" />
-        <module name="anyboot-alipay" />
+        <module name="anyboot-weixin" />
+        <module name="anyboot-video" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

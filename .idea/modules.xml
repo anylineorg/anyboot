@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/anyboot.iml" filepath="$PROJECT_DIR$/.idea/anyboot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/anyboot-alipay/anyboot-alipay.iml" filepath="$PROJECT_DIR$/anyboot-alipay/anyboot-alipay.iml" />
-      <module fileurl="file://$PROJECT_DIR$/anyboot-aliyun/anyboot-aliyun.iml" filepath="$PROJECT_DIR$/anyboot-aliyun/anyboot-aliyun.iml" />
       <module fileurl="file://$PROJECT_DIR$/anyboot-amap/anyboot-amap.iml" filepath="$PROJECT_DIR$/anyboot-amap/anyboot-amap.iml" />
       <module fileurl="file://$PROJECT_DIR$/anyboot-core/anyboot-core.iml" filepath="$PROJECT_DIR$/anyboot-core/anyboot-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/anyboot-dependency/anyboot-dependency.iml" filepath="$PROJECT_DIR$/anyboot-dependency/anyboot-dependency.iml" />
