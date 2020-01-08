@@ -11,15 +11,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="anyboot" target="1.5" />
+      <module name="anyboot" target="1.7" />
       <module name="anyboot-alipay" target="1.7" />
       <module name="anyboot-aliyun" target="1.7" />
       <module name="anyboot-amap" target="1.7" />
       <module name="anyboot-core" target="1.7" />
-      <module name="anyboot-dependency" target="1.8" />
+      <module name="anyboot-dependency" target="1.7" />
       <module name="anyboot-easemob" target="1.7" />
       <module name="anyboot-ext" target="1.7" />
-      <module name="anyboot-jdbc" target="1.8" />
+      <module name="anyboot-jdbc" target="1.7" />
       <module name="anyboot-jdbc-db2" target="1.7" />
       <module name="anyboot-jdbc-hgdb" target="1.7" />
       <module name="anyboot-jdbc-mssql" target="1.7" />
@@ -28,7 +28,7 @@
       <module name="anyboot-jdbc-postgresql" target="1.7" />
       <module name="anyboot-jpush" target="1.7" />
       <module name="anyboot-mail" target="1.7" />
-      <module name="anyboot-mvc" target="1.8" />
+      <module name="anyboot-mvc" target="1.7" />
       <module name="anyboot-nc" target="1.7" />
       <module name="anyboot-net" target="1.7" />
       <module name="anyboot-qq" target="1.7" />
