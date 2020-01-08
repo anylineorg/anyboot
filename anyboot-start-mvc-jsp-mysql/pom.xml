@@ -6,6 +6,7 @@
 		<groupId>org.anyline</groupId>
 		<artifactId>anyboot-start-mvc-jsp</artifactId>
 		<version>8.3.7.215</version>
+		<relativePath>../anyboot-start-mvc-jsp</relativePath>
 	</parent>
 
 	<artifactId>anyboot-start-mvc-jsp-mysql</artifactId>

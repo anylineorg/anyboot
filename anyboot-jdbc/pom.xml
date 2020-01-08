@@ -7,6 +7,7 @@
 		<groupId>org.anyline</groupId>
 		<artifactId>anyboot-dependency</artifactId>
 		<version>8.3.7.215</version>
+		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
 	
 	<artifactId>anyboot-jdbc</artifactId>
