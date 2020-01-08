@@ -6,40 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="anyboot-web" />
-        <module name="anyboot-mail" />
-        <module name="anyboot-jdbc-postgresql" />
-        <module name="anyboot-web-ext" />
-        <module name="anyboot-amap" />
-        <module name="anyboot-easemob" />
-        <module name="anyboot-ext" />
-        <module name="anyboot-net" />
         <module name="anyboot-mvc" />
-        <module name="anyboot-jdbc-mssql" />
-        <module name="anyboot-jdbc-mysql" />
-        <module name="anyboot-nc" />
-        <module name="anyboot-jpush" />
-        <module name="anyboot-qq" />
-        <module name="anyboot-core" />
         <module name="anyboot-jdbc" />
-        <module name="anyboot-jdbc-hgdb" />
-        <module name="anyboot-jdbc-db2" />
-        <module name="anyboot-redis" />
-        <module name="anyboot-jdbc-oracle" />
-        <module name="anyboot-weixin" />
-        <module name="anyboot-video" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="anyboot" target="1.7" />
+      <module name="anyboot" target="1.5" />
       <module name="anyboot-alipay" target="1.7" />
       <module name="anyboot-aliyun" target="1.7" />
       <module name="anyboot-amap" target="1.7" />
       <module name="anyboot-core" target="1.7" />
-      <module name="anyboot-dependency" target="1.7" />
+      <module name="anyboot-dependency" target="1.8" />
       <module name="anyboot-easemob" target="1.7" />
       <module name="anyboot-ext" target="1.7" />
-      <module name="anyboot-jdbc" target="1.7" />
+      <module name="anyboot-jdbc" target="1.8" />
       <module name="anyboot-jdbc-db2" target="1.7" />
       <module name="anyboot-jdbc-hgdb" target="1.7" />
       <module name="anyboot-jdbc-mssql" target="1.7" />
@@ -48,7 +28,7 @@
       <module name="anyboot-jdbc-postgresql" target="1.7" />
       <module name="anyboot-jpush" target="1.7" />
       <module name="anyboot-mail" target="1.7" />
-      <module name="anyboot-mvc" target="1.7" />
+      <module name="anyboot-mvc" target="1.8" />
       <module name="anyboot-nc" target="1.7" />
       <module name="anyboot-net" target="1.7" />
       <module name="anyboot-qq" target="1.7" />
