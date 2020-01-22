@@ -1,6 +1,0 @@
-org\anyboot\mvc\plugin\springmvc\TemplateResourceViewResolver.class
-org\anyboot\mvc\controller\impl\AnybootController.class
-org\anyboot\mvc\controller\impl\TemplateController.class
-org\anyboot\mvc\plugin\springmvc\HttpCharsetConvert.class
-org\anyboot\mvc\plugin\springmvc\TemplateView.class
-org\anyboot\mvc\plugin\springmvc\TemplateModelAndView.class

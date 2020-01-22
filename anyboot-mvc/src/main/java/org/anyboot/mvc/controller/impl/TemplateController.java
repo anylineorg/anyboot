@@ -8,7 +8,7 @@ import org.anyline.util.BeanUtil;
 import org.anyline.util.ConfigTable;
 import org.anyline.web.util.WebUtil;
 
-public class TemplateController extends AnybootController{
+public class TemplateController extends org.anyline.controller.impl.TemplateController{
 	/**
 	 * 根据dir构造文件目录(super.dir+this.dir)
 	 * @return return
