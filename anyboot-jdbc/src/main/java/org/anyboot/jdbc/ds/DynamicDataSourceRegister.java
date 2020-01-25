@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 import org.anyline.jdbc.ds.DataSourceHolder;
 import org.anyline.jdbc.ds.DynamicDataSource;
 import org.anyline.util.BasicUtil;
+import org.anyline.util.CharUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.MutablePropertyValues;
@@ -35,62 +36,21 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         initDefaultDataSource(environment);
         initSpringDataSources(environment);
     }
-
     private void initDefaultDataSource(Environment env) {
         // 读取主数据源
-        Map<String, Object> dsMap = new HashMap<>();
-        String driver = env.getProperty("spring.datasource.driver");
-        if(BasicUtil.isEmpty(driver)){
-        	driver = env.getProperty("spring.datasource.driver-class-name");
-        }
-        if(BasicUtil.isEmpty(driver)){
-        	driver = env.getProperty("spring.datasource.driverClassName");
-        }
-        dsMap.put("driver", driver);
-        String url = env.getProperty("spring.datasource.url");
-        if(BasicUtil.isEmpty(url)){
-        	url = env.getProperty("spring.datasource.jdbc-url");
-        }
-        if(BasicUtil.isEmpty(url)){
-        	url = env.getProperty("spring.datasource.jdbcUrl");
-        }
-        dsMap.put("url", url);
-        dsMap.put("username", env.getProperty("spring.datasource.username"));
-        dsMap.put("password", env.getProperty("spring.datasource.password"));
+        Map<String, Object> dsMap = parseConnectionParam(env,null);
         defaultDataSource = buildDataSource(dsMap);
     }
-
-
     private void initSpringDataSources(Environment env) {
         // 读取配置文件获取更多数据源
         String prefixs = env.getProperty("spring.datasource.list");
         if(null != prefixs){
 	        for (String prefix : prefixs.split(",")) {
 	            // 多个数据源
-	            Map<String, Object> dsMap = new HashMap<>();
-	            String type = env.getProperty("spring.datasource." + prefix + ".type");
-	            dsMap.put("type", type);
-	            String driver = env.getProperty("spring.datasource." + prefix + ".driver");
-	            if(BasicUtil.isEmpty(driver)){
-	            	driver = env.getProperty("spring.datasource." + prefix + ".driver-class-name");
-	            }
-	            if(BasicUtil.isEmpty(driver)){
-	            	driver = env.getProperty("spring.datasource." + prefix + ".driverClassName");
-	            }
-	            dsMap.put("driver", driver);
-	            String url = env.getProperty("spring.datasource." + prefix + ".url");
-	            if(BasicUtil.isEmpty(url)){
-	            	url = env.getProperty("spring.datasource." + prefix + ".jdbc-url");
-	            }
-	            if(BasicUtil.isEmpty(url)){
-	            	url = env.getProperty("spring.datasource." + prefix + ".jdbcUrl");
-	            }
-	            dsMap.put("url", url);
-	            dsMap.put("username", env.getProperty("spring.datasource." + prefix + ".username"));
-	            dsMap.put("password", env.getProperty("spring.datasource." + prefix + ".password"));
+	            Map<String, Object> dsMap = parseConnectionParam(env, prefix);
 	            DataSource ds = buildDataSource(dsMap);
 	            springDataSources.put(prefix, ds);
-	        	log.warn("[创建数据源][key:{},type:{},driver:{},url:{}]",prefix, type, driver, url);
+	        	log.warn("[创建数据源][prefix:{}]",prefix);
 	        }
         }
     }
@@ -145,4 +105,58 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         }
         return null;
     }
+    private String getProperty(Environment env, String key){
+        String value = null;
+        if(null == env || null == key){
+            return value;
+        }
+        value = env.getProperty(key);
+        if(null != value){
+            return value;
+        }
+        String[] ks = key.split("-");
+        String sKey = null;
+        for(String k:ks){
+            if(null == sKey){
+                sKey = k;
+            }else{
+                sKey = sKey + CharUtil.toUpperCaseHeader(k);
+            }
+        }
+        value = env.getProperty(sKey);
+        return value;
+    }
+    private Map<String,Object> parseConnectionParam(Environment env, String prefix){
+        Map<String,Object> map = new HashMap<String, Object>();
+        if(BasicUtil.isNotEmpty(prefix)){
+            prefix = "spring.datasource." + prefix;
+        }else{
+            prefix = "spring.datasource";
+        }
+        String type = env.getProperty(prefix + ".type");
+        map.put("type", type);
+        String driver = env.getProperty(prefix + ".driver");
+        if(null == driver){
+            driver = getProperty(env,prefix + "driver-class-name");
+        }
+        map.put("driver", driver);
+        String url = env.getProperty(prefix + ".url");
+        if(null == url){
+            url = getProperty(env, prefix + ".jdbc-url");
+        }
+        map.put("url", url);
+        map.put("username", env.getProperty(prefix + ".username"));
+        map.put("password", env.getProperty(prefix + ".password"));
+        map.put("max-idle", env.getProperty(prefix + "max-idle"));
+        map.put("max-wait", env.getProperty(prefix + "max-wait"));
+        map.put("min-idle", env.getProperty(prefix + "min-idle"));
+        map.put("initial-size", env.getProperty(prefix + "initial-size"));
+        map.put("validation-query", env.getProperty(prefix + "validation-query"));
+        map.put("test-on-borrow", env.getProperty(prefix + "test-on-borrow"));
+        map.put("test-while-idle", env.getProperty(prefix + "test-while-idle"));
+        map.put("time-between-eviction-runs-millis", env.getProperty(prefix + "time-between-eviction-runs-millis"));
+
+        return map;
+    }
+
 }
