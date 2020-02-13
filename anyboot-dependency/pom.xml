@@ -11,7 +11,7 @@
 	
 	<groupId>org.anyline</groupId>
 	<artifactId>anyboot-dependency</artifactId>
-	<version>8.3.7.215</version>
+	<version>8.3.7.215-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>anyboot dependency</name>
 	<description>AnyLine针对SpringBoot环境的支持</description>
@@ -42,8 +42,8 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		
-		<anyboot.version>8.3.7.215</anyboot.version>
-		<anyline.version>8.3.7</anyline.version>
+		<anyboot.version>8.3.7.215-SNAPSHOT</anyboot.version>
+		<anyline.version>8.3.7-SNAPSHOT</anyline.version>
         <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
 		
 		<anyboot.core.version>${anyboot.version}</anyboot.core.version>
@@ -369,6 +369,46 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-javadocs</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>snapshot</id>
+			<distributionManagement>
+				<repository>
+					<id>anyline-snapshots</id>
+					<name>snapshots</name>
+					<url>http://maven.anyline.org/repository/maven-snapshots/</url>
+				</repository>
+			</distributionManagement>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>2.2.1</version>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.10.3</version>
 						<executions>
 							<execution>
 								<id>attach-javadocs</id>
