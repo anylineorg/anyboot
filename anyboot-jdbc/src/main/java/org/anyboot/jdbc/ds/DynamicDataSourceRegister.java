@@ -139,13 +139,22 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         if(null == driver){
             driver = getProperty(env,prefix + "driver-class-name");
         }
+        if(null == driver){
+            driver = getProperty(env,prefix + "driver-class");
+        }
         map.put("driver", driver);
         String url = env.getProperty(prefix + ".url");
         if(null == url){
             url = getProperty(env, prefix + ".jdbc-url");
         }
+
+        String user = env.getProperty(prefix + ".user");
+        if(null == url){
+            url = getProperty(env, prefix + ".username");
+        }
+
         map.put("url", url);
-        map.put("username", env.getProperty(prefix + ".username"));
+        map.put("username", user);
         map.put("password", env.getProperty(prefix + ".password"));
         map.put("max-idle", env.getProperty(prefix + "max-idle"));
         map.put("max-wait", env.getProperty(prefix + "max-wait"));
