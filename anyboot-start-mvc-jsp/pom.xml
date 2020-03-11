@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.anyline</groupId>
+		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-start-mvc</artifactId>
 		<version>8.3.7.215-SNAPSHOT</version>
 		<relativePath>../anyboot-start-mvc</relativePath>
@@ -18,17 +18,14 @@
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<!-- end jsp -->
 	</dependencies>

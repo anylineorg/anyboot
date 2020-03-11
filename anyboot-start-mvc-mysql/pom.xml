@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.anyline</groupId>
+		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-start-mvc</artifactId>
 		<version>8.3.7.215-SNAPSHOT</version>
 		<relativePath>../anyboot-start-mvc</relativePath>
@@ -15,7 +15,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.anyline</groupId>
+			<groupId>org.anyboot</groupId>
 			<artifactId>anyboot-jdbc</artifactId>
 		</dependency>
 		<!-- mysql -->
