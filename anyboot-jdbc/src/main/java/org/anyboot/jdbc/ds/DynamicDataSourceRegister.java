@@ -29,8 +29,18 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
     //默认数据源
     private DataSource defaultDataSource;
     //用户自定义数据源
-    private Map<String, DataSource> springDataSources = new HashMap<>();
+    private static Map<String, DataSource> springDataSources = new HashMap<>();
 
+    public static DataSource reg(String code, Map<String, Object> map){
+        DataSource ds = null;
+        if(springDataSources.containsKey(code)) {
+            ds = springDataSources.get(code);
+        }else{
+            ds = buildDataSource(map);
+            springDataSources.put(code, ds);
+        }
+        return ds;
+    }
     @Override
     public void setEnvironment(Environment environment) {
         initDefaultDataSource(environment);
@@ -81,7 +91,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
     }
 
     @SuppressWarnings("unchecked")
-	public DataSource buildDataSource(Map<String, Object> dataSourceMap) {
+	public static DataSource buildDataSource(Map<String, Object> dataSourceMap) {
         try {
             Object type = dataSourceMap.get("type");
             if (type == null) {
