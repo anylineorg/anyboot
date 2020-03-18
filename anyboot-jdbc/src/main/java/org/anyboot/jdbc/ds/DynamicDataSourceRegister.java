@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
+import com.zaxxer.hikari.HikariDataSource;
 import org.anyline.jdbc.ds.DataSourceHolder;
 import org.anyline.jdbc.ds.DynamicDataSource;
 import org.anyline.util.BasicUtil;
@@ -31,11 +32,26 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
     //用户自定义数据源
     private static Map<String, DataSource> springDataSources = new HashMap<>();
 
-    public static DataSource reg(String code, Map<String, Object> map){
+    public static DataSource reg(String code, Map<String, Object> map) throws Exception{
         DataSource ds = null;
         if(springDataSources.containsKey(code)) {
-            ds = springDataSources.get(code);
+            throw new Exception("重复注册");
         }else{
+            ds = buildDataSource(map);
+            springDataSources.put(code, ds);
+        }
+        return ds;
+    }
+
+    public static DataSource reg(String code, String url, String user, String password) throws Exception{
+        DataSource ds = null;
+        if(springDataSources.containsKey(code)) {
+            throw new Exception("重复注册");
+        }else{
+            Map<String,Object> map = new HashMap<String,Object>();
+            map.put("url", url);
+            map.put("username", user);
+            map.put("password", password);
             ds = buildDataSource(map);
             springDataSources.put(code, ds);
         }
