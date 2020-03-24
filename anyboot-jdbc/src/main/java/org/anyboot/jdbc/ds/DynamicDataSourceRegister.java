@@ -1,96 +1,85 @@
 package org.anyboot.jdbc.ds;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.sql.DataSource;
-
 import org.anyline.jdbc.ds.DataSourceHolder;
+import org.anyline.jdbc.ds.DynamicDataSource;
 import org.anyline.util.BasicUtil;
 import org.anyline.util.BeanUtil;
 import org.anyline.util.CharUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotationMetadata;
 
+import javax.sql.DataSource;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 
 public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware {
     private Logger log = LoggerFactory.getLogger(DynamicDataSourceRegister.class);
 
-
-    //指定默认数据源(springboot2.0默认数据源是hikari如果使用其他数据源可以自己配置)
+    //指定默认数据源(springboot2.0默认数据源是hikari如何想使用其他数据源可以自己配置)
     private static final String DATASOURCE_TYPE_DEFAULT = "com.zaxxer.hikari.HikariDataSource";
+    //默认数据源
+    private DataSource defaultDataSource;
+    //用户自定义数据源
+    private static Map<String, DataSource> springDataSources = new HashMap<>();
+
+
     @Override
     public void setEnvironment(Environment environment) {
         initDefaultDataSource(environment);
-        initDataSources(environment);
+        initSpringDataSources(environment);
     }
-
-    /**
-     * 初始化默认数据源
-     * @param env 配置文件
-     */
     private void initDefaultDataSource(Environment env) {
         // 读取主数据源
-        DataSource ds = buildDataSource("spring.datasource",env);
-        try {
-            DataSourceHolder.reg("datasource", ds);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        defaultDataSource = buildDataSource("spring.datasource",env);
     }
-
-    /**
-     * 初始化数据源
-     * @param env 配置文件
-     */
-    private void initDataSources(Environment env) {
+    private void initSpringDataSources(Environment env) {
         // 读取配置文件获取更多数据源
         String prefixs = env.getProperty("spring.datasource.list");
         if(null != prefixs){
-	        for (String prefix : prefixs.split(",")) {
-	            // 多个数据源
-	            DataSource ds = buildDataSource("spring.datasource."+prefix,env);
-	            try {
-                    DataSourceHolder.reg(prefix, ds);
-                }catch (Exception e){
-	                e.printStackTrace();
-                }
-	        	log.warn("[创建数据源][prefix:{}]",prefix);
-	        }
+            for (String prefix : prefixs.split(",")) {
+                // 多个数据源
+                DataSource ds = buildDataSource("spring.datasource."+prefix,env);
+                springDataSources.put(prefix, ds);
+                log.warn("[创建数据源][prefix:{}]",prefix);
+            }
         }
     }
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata annotationMetadata, BeanDefinitionRegistry beanDefinitionRegistry) {
-        //Map<Object, Object> params = new HashMap<Object, Object>();
+        Map<Object, Object> targetDataSources = new HashMap<Object, Object>();
         //添加默认数据源
-        //params.put("dataSource", this.defaultDataSource);
-        //DataSourceHolder.reg("dataSource");
+        targetDataSources.put("dataSource", this.defaultDataSource);
+        DataSourceHolder.reg("dataSource");
         //添加其他数据源
-        //params.putAll(springDataSources);
-//        for (String key : springDataSources.keySet()) {
-//        	log.warn("[注册数据源][key:{}]",key);
-//        	DataSourceHolder.reg(key);
-//        }
+        targetDataSources.putAll(springDataSources);
+        for (String key : springDataSources.keySet()) {
+            log.warn("[注册数据源][key:{}]",key);
+            DataSourceHolder.reg(key);
+        }
 
         //创建DynamicDataSource
-//        GenericBeanDefinition beanDefinition = new GenericBeanDefinition();
-//        beanDefinition.setBeanClass(DynamicDataSource.class);
-//        beanDefinition.setSynthetic(true);
-//        MutablePropertyValues mpv = beanDefinition.getPropertyValues();
-//        mpv.addPropertyValue("defaultTargetDataSource", defaultDataSource);
-//        mpv.addPropertyValue("targetDataSources", params);
-//        //注册 - BeanDefinitionRegistry
-//        beanDefinitionRegistry.registerBeanDefinition("dataSource", beanDefinition);
+        GenericBeanDefinition beanDefinition = new GenericBeanDefinition();
+        beanDefinition.setBeanClass(DynamicDataSource.class);
+        beanDefinition.setSynthetic(true);
+        MutablePropertyValues mpv = beanDefinition.getPropertyValues();
+        mpv.addPropertyValue("defaultTargetDataSource", defaultDataSource);
+        mpv.addPropertyValue("targetDataSources", targetDataSources);
+        //注册 - BeanDefinitionRegistry
+        beanDefinitionRegistry.registerBeanDefinition("dataSource", beanDefinition);
 
     }
+
 
     @SuppressWarnings("unchecked")
     public static DataSource buildDataSource(String prefix, Environment env) {
@@ -193,4 +182,5 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         }
         return value;
     }
+
 }
