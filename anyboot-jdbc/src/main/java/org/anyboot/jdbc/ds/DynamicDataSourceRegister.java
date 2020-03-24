@@ -1,81 +1,67 @@
 package org.anyboot.jdbc.ds;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.sql.DataSource;
 
-import com.zaxxer.hikari.HikariDataSource;
 import org.anyline.jdbc.ds.DataSourceHolder;
-import org.anyline.jdbc.ds.DynamicDataSource;
 import org.anyline.util.BasicUtil;
+import org.anyline.util.BeanUtil;
 import org.anyline.util.CharUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotationMetadata;
- 
+
 
 public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware {
     private Logger log = LoggerFactory.getLogger(DynamicDataSourceRegister.class);
 
-    //指定默认数据源(springboot2.0默认数据源是hikari如何想使用其他数据源可以自己配置)
+
+    //指定默认数据源(springboot2.0默认数据源是hikari如果使用其他数据源可以自己配置)
     private static final String DATASOURCE_TYPE_DEFAULT = "com.zaxxer.hikari.HikariDataSource";
-    //默认数据源
-    private DataSource defaultDataSource;
-    //用户自定义数据源
-    private static Map<String, DataSource> springDataSources = new HashMap<>();
-
-    public static DataSource reg(String code, Map<String, Object> map) throws Exception{
-        DataSource ds = null;
-        if(springDataSources.containsKey(code)) {
-            throw new Exception("重复注册");
-        }else{
-            ds = buildDataSource(map);
-            springDataSources.put(code, ds);
-        }
-        return ds;
-    }
-
-    public static DataSource reg(String code, String url, String user, String password) throws Exception{
-        DataSource ds = null;
-        if(springDataSources.containsKey(code)) {
-            throw new Exception("重复注册");
-        }else{
-            Map<String,Object> map = new HashMap<String,Object>();
-            map.put("url", url);
-            map.put("username", user);
-            map.put("password", password);
-            ds = buildDataSource(map);
-            springDataSources.put(code, ds);
-        }
-        return ds;
-    }
     @Override
     public void setEnvironment(Environment environment) {
         initDefaultDataSource(environment);
-        initSpringDataSources(environment);
+        initDataSources(environment);
     }
+
+    /**
+     * 初始化默认数据源
+     * @param env 配置文件
+     */
     private void initDefaultDataSource(Environment env) {
         // 读取主数据源
-        Map<String, Object> dsMap = parseConnectionParam(env,null);
-        defaultDataSource = buildDataSource(dsMap);
+        DataSource ds = buildDataSource("spring.datasource",env);
+        try {
+            DataSourceHolder.reg("datasource", ds);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
-    private void initSpringDataSources(Environment env) {
+
+    /**
+     * 初始化数据源
+     * @param env 配置文件
+     */
+    private void initDataSources(Environment env) {
         // 读取配置文件获取更多数据源
         String prefixs = env.getProperty("spring.datasource.list");
         if(null != prefixs){
 	        for (String prefix : prefixs.split(",")) {
 	            // 多个数据源
-	            Map<String, Object> dsMap = parseConnectionParam(env, prefix);
-	            DataSource ds = buildDataSource(dsMap);
-	            springDataSources.put(prefix, ds);
+	            DataSource ds = buildDataSource("spring.datasource."+prefix,env);
+	            try {
+                    DataSourceHolder.reg(prefix, ds);
+                }catch (Exception e){
+	                e.printStackTrace();
+                }
 	        	log.warn("[创建数据源][prefix:{}]",prefix);
 	        }
         }
@@ -83,115 +69,128 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata annotationMetadata, BeanDefinitionRegistry beanDefinitionRegistry) {
-        Map<Object, Object> targetDataSources = new HashMap<Object, Object>();
+        //Map<Object, Object> params = new HashMap<Object, Object>();
         //添加默认数据源
-        targetDataSources.put("dataSource", this.defaultDataSource);
-        DataSourceHolder.reg("dataSource");
+        //params.put("dataSource", this.defaultDataSource);
+        //DataSourceHolder.reg("dataSource");
         //添加其他数据源
-        targetDataSources.putAll(springDataSources);
-        for (String key : springDataSources.keySet()) {
-        	log.warn("[注册数据源][key:{}]",key);
-        	DataSourceHolder.reg(key);
-        }
+        //params.putAll(springDataSources);
+//        for (String key : springDataSources.keySet()) {
+//        	log.warn("[注册数据源][key:{}]",key);
+//        	DataSourceHolder.reg(key);
+//        }
 
         //创建DynamicDataSource
-        GenericBeanDefinition beanDefinition = new GenericBeanDefinition();
-        beanDefinition.setBeanClass(DynamicDataSource.class);
-        beanDefinition.setSynthetic(true);
-        MutablePropertyValues mpv = beanDefinition.getPropertyValues();
-        mpv.addPropertyValue("defaultTargetDataSource", defaultDataSource);
-        mpv.addPropertyValue("targetDataSources", targetDataSources);
-        //注册 - BeanDefinitionRegistry
-        beanDefinitionRegistry.registerBeanDefinition("dataSource", beanDefinition);
+//        GenericBeanDefinition beanDefinition = new GenericBeanDefinition();
+//        beanDefinition.setBeanClass(DynamicDataSource.class);
+//        beanDefinition.setSynthetic(true);
+//        MutablePropertyValues mpv = beanDefinition.getPropertyValues();
+//        mpv.addPropertyValue("defaultTargetDataSource", defaultDataSource);
+//        mpv.addPropertyValue("targetDataSources", params);
+//        //注册 - BeanDefinitionRegistry
+//        beanDefinitionRegistry.registerBeanDefinition("dataSource", beanDefinition);
 
     }
 
     @SuppressWarnings("unchecked")
-	public static DataSource buildDataSource(Map<String, Object> dataSourceMap) {
+    public static DataSource buildDataSource(String prefix, Environment env) {
         try {
-            Object type = dataSourceMap.get("type");
+            if(BasicUtil.isNotEmpty(prefix) && !prefix.endsWith(".")){
+                prefix += ".";
+            }
+            String type = getProperty(prefix,env, "type");
             if (type == null) {
                 type = DATASOURCE_TYPE_DEFAULT;// 默认DataSource
             }
-            Class<? extends DataSource> dataSourceType = (Class<? extends DataSource>) Class.forName((String) type);
-            String driverClassName = (String)dataSourceMap.get("driver");
-            String url = (String)dataSourceMap.get("url");
-            String username = (String)dataSourceMap.get("username");
-            String password = (String)dataSourceMap.get("password");
+
+            Class<? extends DataSource> dataSourceType = (Class<? extends DataSource>) Class.forName(type);
+            String driverClassName = getProperty(prefix, env, "driver","driver-class","driver-class-name");
+            String url = getProperty(prefix, env, "url","jdbc-url");
+            String username = getProperty(prefix, env,"user","username");
+            String password = getProperty(prefix, env, "password");
             // 自定义DataSource配置
             DataSourceBuilder<?> factory = DataSourceBuilder.create()
-            		.driverClassName(driverClassName)
-            		.url(url)
-            		.username(username)
-            		.password(password)
-            		.type(dataSourceType);
-            return factory.build();
-        } catch (ClassNotFoundException e) {
+                    .driverClassName(driverClassName)
+                    .url(url)
+                    .username(username)
+                    .password(password)
+                    .type(dataSourceType);
+            DataSource ds = factory.build();
+            setFieldsValue(ds, prefix, env);
+            return ds;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
-    private String getProperty(Environment env, String key){
-        String value = null;
-        if(null == env || null == key){
-            return value;
-        }
-        value = env.getProperty(key);
-        if(null != value){
-            return value;
-        }
-        String[] ks = key.split("-");
-        String sKey = null;
-        for(String k:ks){
-            if(null == sKey){
-                sKey = k;
-            }else{
-                sKey = sKey + CharUtil.toUpperCaseHeader(k);
+
+    /**
+     * 根据配置文件设置对象属性值
+     * @param obj 对象
+     * @param prefix 前缀
+     * @param env 配置文件环境
+     */
+    private static void setFieldsValue(Object obj, String prefix, Environment env ){
+        List<String> fields = BeanUtil.getFieldsName(obj.getClass());
+        for(String field:fields){
+            String value = getProperty(prefix, env, field);
+            if(BasicUtil.isNotEmpty(value)) {
+                BeanUtil.setFieldValue(obj, field, value);
             }
         }
-        value = env.getProperty(sKey);
+    }
+
+    /**
+     * 根据配置文件提取指定key的值
+     * @param prefix 前缀
+     * @param env 配置文件环境
+     * @param keys key列表 第一个有值的key生效
+     * @return String
+     */
+    private static String getProperty(String prefix, Environment env, String ... keys){
+        String value = null;
+        if(null == env || null == keys){
+            return value;
+        }
+        if(null == prefix){
+            prefix = "";
+        }
+        for(String key:keys){
+            key = prefix + key;
+            value = env.getProperty(key);
+            if(null != value){
+                return value;
+            }
+            //以中划线分隔的配置文件
+            String[] ks = key.split("-");
+            String sKey = null;
+            for(String k:ks){
+                if(null == sKey){
+                    sKey = k;
+                }else{
+                    sKey = sKey + CharUtil.toUpperCaseHeader(k);
+                }
+            }
+            value = env.getProperty(sKey);
+            if(null != value){
+                return value;
+            }
+
+            //以下划线分隔的配置文件
+            ks = key.split("_");
+            sKey = null;
+            for(String k:ks){
+                if(null == sKey){
+                    sKey = k;
+                }else{
+                    sKey = sKey + CharUtil.toUpperCaseHeader(k);
+                }
+            }
+            value = env.getProperty(sKey);
+            if(null != value){
+                return value;
+            }
+        }
         return value;
     }
-    private Map<String,Object> parseConnectionParam(Environment env, String prefix){
-        Map<String,Object> map = new HashMap<String, Object>();
-        if(BasicUtil.isNotEmpty(prefix)){
-            prefix = "spring.datasource." + prefix;
-        }else{
-            prefix = "spring.datasource";
-        }
-        String type = env.getProperty(prefix + ".type");
-        map.put("type", type);
-        String driver = env.getProperty(prefix + ".driver");
-        if(null == driver){
-            driver = getProperty(env,prefix + "driver-class-name");
-        }
-        if(null == driver){
-            driver = getProperty(env,prefix + "driver-class");
-        }
-        map.put("driver", driver);
-        String url = env.getProperty(prefix + ".url");
-        if(null == url){
-            url = getProperty(env, prefix + ".jdbc-url");
-        }
-
-        String user = env.getProperty(prefix + ".user");
-        if(null == url){
-            url = getProperty(env, prefix + ".username");
-        }
-
-        map.put("url", url);
-        map.put("username", user);
-        map.put("password", env.getProperty(prefix + ".password"));
-        map.put("max-idle", env.getProperty(prefix + "max-idle"));
-        map.put("max-wait", env.getProperty(prefix + "max-wait"));
-        map.put("min-idle", env.getProperty(prefix + "min-idle"));
-        map.put("initial-size", env.getProperty(prefix + "initial-size"));
-        map.put("validation-query", env.getProperty(prefix + "validation-query"));
-        map.put("test-on-borrow", env.getProperty(prefix + "test-on-borrow"));
-        map.put("test-while-idle", env.getProperty(prefix + "test-while-idle"));
-        map.put("time-between-eviction-runs-millis", env.getProperty(prefix + "time-between-eviction-runs-millis"));
-
-        return map;
-    }
-
 }
