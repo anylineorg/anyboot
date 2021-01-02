@@ -8,6 +8,10 @@ import org.anyline.util.BeanUtil;
 import org.anyline.util.ConfigTable;
 import org.anyline.web.util.WebUtil;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
+
 public class TemplateController extends org.anyline.controller.impl.TemplateController{
 	/**
 	 * 根据dir构造文件目录(super.dir+this.dir)
@@ -32,6 +36,21 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 		}
 		if(!result.endsWith("/")){
 			result = result + "/";
+		}
+		HttpServletRequest request = getRequest();
+		if(null != request){
+			Map<String,Object> map = (Map<String,Object>)request.getAttribute("anyline_template_variable");
+			if(null == map){
+				map = (Map<String,Object>)request.getSession().getAttribute("anyline_template_variable");
+			}
+			if(null != map){
+				for(String key:map.keySet()){
+					Object value = map.get(key);
+					if(null != value) {
+						result = result.replace("${" + key + "}", value.toString());
+					}
+				}
+			}
 		}
 		return result;
 	}
@@ -80,6 +99,7 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 				name = name.replace("/wap/", "/"+clientType+"/");
 			}
 			name = name.replace("${client_type}", clientType);
+			name = name.replace("${client}", clientType);
 		}
 		if(null != content_template){
 			if(adapt){
@@ -87,6 +107,7 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 				content_template = content_template.replace("/wap/", "/"+clientType+"/");
 			}
 			content_template = content_template.replace("${client_type}", clientType);
+			content_template = content_template.replace("${client}", clientType);
 		}
 		if(ConfigTable.isDebug() && adapt){
 			log.warn("[create view template][content path:" + content_template + "][template path:" + name + "]");
