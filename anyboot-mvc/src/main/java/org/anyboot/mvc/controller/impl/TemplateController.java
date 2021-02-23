@@ -37,6 +37,10 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 		if(!result.endsWith("/")){
 			result = result + "/";
 		}
+		result = parseVariable(result);
+		return result;
+	}
+	private String parseVariable(String src){
 		HttpServletRequest request = getRequest();
 		if(null != request){
 			Map<String,Object> map = (Map<String,Object>)request.getAttribute("anyline_template_variable");
@@ -47,12 +51,12 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 				for(String key:map.keySet()){
 					Object value = map.get(key);
 					if(null != value) {
-						result = result.replace("${" + key + "}", value.toString());
+						src = src.replace("${" + key + "}", value.toString());
 					}
 				}
 			}
 		}
-		return result;
+		return src;
 	}
 
 	/**
@@ -89,6 +93,7 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 				}
 			}
 		}
+		content_template = parseVariable(content_template);
 		String clientType = "web";
 		if(WebUtil.isWap(getRequest())){
 			clientType = "wap";

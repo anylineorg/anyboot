@@ -7,6 +7,7 @@
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter-parent</artifactId>
 	    <version>2.1.5.RELEASE</version>
+		<relativePath/>
 	</parent>
 	
 	<groupId>org.anyboot</groupId>
@@ -109,6 +110,9 @@
 		<jpush.client.version>3.3.12</jpush.client.version>
 		<jpush.version>1.1.6</jpush.version>
 		<alibaba.nacos.version>1.1.4</alibaba.nacos.version>
+		<spring-boot-admin.version>2.1.5</spring-boot-admin.version>
+		<spring-cloud.version>Greenwich.SR5</spring-cloud.version>
+		<spring-cloud-alibaba.version>2.1.2.RELEASE</spring-cloud-alibaba.version>
 	</properties>
 	
 	<dependencyManagement>
