@@ -124,12 +124,20 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 
 	
 	protected TemplateModelAndView template(boolean adapt, String name){
-		return template(adapt, name, TemplateView.ANYLINE_TEMPLATE_NAME_DEFAULT);
+		String template = ConfigTable.getString("DEFAULT_TEMPLATE");
+		if(BasicUtil.isEmpty(template)){
+			template = TemplateView.ANYLINE_TEMPLATE_NAME_DEFAULT;
+		}
+		return template(adapt, name, template);
 	}
 
 	
 	protected TemplateModelAndView template(String name){
-		return template(false, name, TemplateView.ANYLINE_TEMPLATE_NAME_DEFAULT);
+		String template = ConfigTable.getString("DEFAULT_TEMPLATE");
+		if(BasicUtil.isEmpty(template)){
+			template = TemplateView.ANYLINE_TEMPLATE_NAME_DEFAULT;
+		}
+		return template(false, name, template);
 	}
 
 	
