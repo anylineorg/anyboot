@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.3.7.215-SNAPSHOT</version>
+		<version>8.3.8.206</version>
 		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
 	
@@ -14,6 +14,7 @@
 	<name>anyboot-jdbc</name>
 	<packaging>jar</packaging>
 	<url>http://www.anyboot.org/jdbc</url>
+	<description>anyboot-jdbc</description>
 
 	<dependencies>
 		<dependency>

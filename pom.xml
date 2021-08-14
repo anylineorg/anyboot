@@ -3,10 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.anyboot</groupId>
 	<artifactId>anyboot</artifactId>
-	<version>8.3.7.215-SNAPSHOT</version>
+	<version>8.3.8.206</version>
 	<packaging>pom</packaging>
 	<name>anyboot</name>
 	<url>http://www.anyboot.org</url>
+	<description>anyboot</description>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -71,6 +72,11 @@
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
 						<version>2.10.3</version>
+						<configuration>
+							<charset>UTF-8</charset>
+							<encoding>UTF-8</encoding>
+							<docencoding>UTF-8</docencoding>
+						</configuration>
 						<executions>
 							<execution>
 								<id>attach-javadocs</id>
@@ -115,14 +121,14 @@
 			</activation>
 			<distributionManagement>
 				<repository>
-					<id>anyline-releases</id>
+					<id>anyline</id>
 					<name>releases</name>
 					<url>http://maven.anyline.org/repository/maven-releases/</url>
 				</repository>
 				<snapshotRepository>
-					<id>anyline-snapshots</id>
+					<id>anyline</id>
 					<name>snapshots</name>
-					<url>http://maven.anyline.org/repository/maven-snapshots/</url>
+					<url>http://maven.anyline.org/repository/mavens/</url>
 				</snapshotRepository>
 			</distributionManagement>
 			<build>
@@ -203,6 +209,7 @@
 			</plugin>
 		</plugins>
 	</build>
+	<!--
 	<repositories>
 		<repository>
 			<id>aliyun</id>
@@ -215,4 +222,5 @@
 			<url>http://maven.anyline.org/repository/maven-public</url>
 		</repository>
 	</repositories>
+	-->
 </project>

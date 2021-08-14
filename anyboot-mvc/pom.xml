@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.3.7.215-SNAPSHOT</version>
+		<version>8.3.8.206</version>
 		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
 	
@@ -15,6 +15,7 @@
 	<packaging>jar</packaging>
 	<name>anyboot-mvc</name>
 	<url>http://www.anyboot.org/mvc</url>
+	<description>anyboot-mvc</description>
 	<dependencies>
 		<dependency>
 			<groupId>org.anyline</groupId>

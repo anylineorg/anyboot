@@ -7,11 +7,12 @@
     <parent>
         <groupId>org.anyboot</groupId>
         <artifactId>anyboot-start</artifactId>
-        <version>8.3.7.215-SNAPSHOT</version>
+        <version>8.3.8.206</version>
         <relativePath>../anyboot-start</relativePath>
     </parent>
 
     <artifactId>anyboot-start-cloud</artifactId>
+    <description>anyboot-start-cloud</description>
     <dependencyManagement>
         <dependencies>
             <!-- spring-boot-admin -->

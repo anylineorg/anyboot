@@ -5,13 +5,14 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.3.7.215-SNAPSHOT</version>
+		<version>8.3.8.206</version>
 		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
 
 	<artifactId>anyboot-start</artifactId>
 	<packaging>pom</packaging>
 	<name>anyboot-start</name>
+	<description>anyboot-start</description>
 	
 	<dependencies>
 		<dependency>
