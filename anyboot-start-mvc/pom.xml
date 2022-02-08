@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-start</artifactId>
-		<version>8.3.8.206</version>
+		<version>8.5.1.2117-SNAPSHOT</version>
 		<relativePath>../anyboot-start</relativePath>
 	</parent>
 
@@ -15,6 +15,10 @@
 	<description>anyboot-start-mvc</description>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 		<!-- spring mvc -->
 		<dependency>
 			<groupId>org.anyboot</groupId>

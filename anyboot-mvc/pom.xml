@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.3.8.206</version>
+		<version>8.5.1.2117-SNAPSHOT</version>
 		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
 	
@@ -20,18 +20,22 @@
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-mvc</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<scope>provided</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jsp-api</artifactId>
 			<scope>provided</scope>
-			<optional>true</optional>
 		</dependency>
 	</dependencies>
 </project>
