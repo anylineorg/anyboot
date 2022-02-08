@@ -9,7 +9,6 @@ import org.anyline.util.ConfigTable;
 import org.anyline.web.util.WebUtil;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 import java.util.Map;
 
 public class TemplateController extends org.anyline.controller.impl.TemplateController{
@@ -113,9 +112,6 @@ public class TemplateController extends org.anyline.controller.impl.TemplateCont
 			}
 			content_template = content_template.replace("${client_type}", clientType);
 			content_template = content_template.replace("${client}", clientType);
-		}
-		if(ConfigTable.isDebug() && adapt){
-			log.warn("[create view template][content path:" + content_template + "][template path:" + name + "]");
 		}
 		tv.setViewName(content_template);
 		tv.addObject(TemplateView.ANYLINE_TEMPLATE_CONTENT_PATH, name);
