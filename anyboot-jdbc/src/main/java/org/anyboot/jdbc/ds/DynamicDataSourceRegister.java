@@ -105,6 +105,8 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
                     .password(password)
                     .type(dataSourceType);
             DataSource ds = factory.build();
+            //先取默认配置
+            setFieldsValue(ds, null, env);
             setFieldsValue(ds, prefix, env);
             return ds;
         } catch (Exception e) {
