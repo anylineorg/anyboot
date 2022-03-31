@@ -75,7 +75,7 @@
 		<!-- <slf4j.version>1.7.25</slf4j.version> -->
 		<!-- <spring.version>4.3.23.RELEASE</spring.version>
 		<spring.version>5.1.7.RELEASE</spring.version>-->
-		<spring.version>5.1.18.RELEASE</spring.version>
+		<spring.version>5.3.18</spring.version>
 		<aliyun.oss.version>3.8.0</aliyun.oss.version>
 		<aliyun.sms.version>2.1.0</aliyun.sms.version>
 		<alipay.version>3.7.26.ALL</alipay.version>
