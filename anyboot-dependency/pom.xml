@@ -9,7 +9,7 @@
 	    <version>2.5.12</version>
 		<relativePath/>
 	</parent>
-
+	
 	<groupId>org.anyboot</groupId>
 	<artifactId>anyboot-dependency</artifactId>
 	<version>8.5.5.2512-SNAPSHOT</version>
@@ -37,7 +37,7 @@
 		<url>https://github.com/anyboot/anyboot</url>
 	</scm>
 	<properties>
-
+	
 	    <java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -103,12 +103,12 @@
 			<dependency>
 				<groupId>org.anyboot</groupId>
 				<artifactId>anyboot-jdbc</artifactId>
-				<version>${anyboot.version}</version>
+				<version>${anyboot.jdbc.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.anyboot</groupId>
 				<artifactId>anyboot-mvc</artifactId>
-				<version>${anyboot.version}</version>
+				<version>${anyboot.mvc.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -124,7 +124,7 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
 				<version>${spring.version}</version>
-			</dependency>
+			</dependency>  
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
@@ -173,6 +173,11 @@
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
 						<version>2.10.3</version>
+						<configuration>
+							<charset>UTF-8</charset>
+							<encoding>UTF-8</encoding>
+							<docencoding>UTF-8</docencoding>
+						</configuration>
 						<executions>
 							<execution>
 								<id>attach-javadocs</id>
@@ -221,7 +226,7 @@
 				<snapshotRepository>
 					<id>anyline</id>
 					<name>snapshots</name>
-					<url>http://maven.anyline.org/repository/maven-snapshots/</url>
+					<url>http://maven.anyline.org/repository/mavens/</url>
 				</snapshotRepository>
 			</distributionManagement>
 			<build>
@@ -272,16 +277,16 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
-					<include>*.tld</include>
-					<include>*.xsd</include>
+						<include>*.tld</include>
+						<include>*.xsd</include>
 				</includes>
 				<targetPath>META-INF</targetPath>
 			</resource>
 			<resource>
 				<directory>/src/main/webapp/WEB-INF</directory>
 				<includes>
-					<include>*.tld</include>
-					<include>*.xsd</include>
+						<include>*.tld</include>
+						<include>*.xsd</include>
 				</includes>
 				<targetPath>META-INF</targetPath>
 			</resource>
