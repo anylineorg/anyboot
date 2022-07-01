@@ -6,10 +6,10 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.5.1.2117-SNAPSHOT</version>
+		<version>8.5.5.2512-SNAPSHOT</version>
 		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
-	
+
 	<artifactId>anyboot-jdbc</artifactId>
 	<name>anyboot-jdbc</name>
 	<packaging>jar</packaging>

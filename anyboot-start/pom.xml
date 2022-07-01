@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.5.1.2117-SNAPSHOT</version>
+		<version>8.5.5.2512-SNAPSHOT</version>
 		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
 
@@ -13,7 +13,7 @@
 	<packaging>pom</packaging>
 	<name>anyboot-start</name>
 	<description>anyboot-start</description>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

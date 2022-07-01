@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.anyboot</groupId>
 	<artifactId>anyboot</artifactId>
-	<version>8.5.1.2117-SNAPSHOT</version>
+	<version>8.5.5.2512-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>anyboot</name>
 	<url>http://www.anyboot.org</url>
