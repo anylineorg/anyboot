@@ -19,11 +19,13 @@
 			<groupId>org.anyboot</groupId>
 			<artifactId>anyboot-jdbc</artifactId>
 		</dependency>
-		<!-- mysql -->
 		<dependency>
 			<groupId>org.anyline</groupId>
 			<artifactId>anyline-jdbc-mysql</artifactId>
 		</dependency>
-		<!-- end mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 	</dependencies>
 </project>

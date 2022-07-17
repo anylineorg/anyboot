@@ -7,14 +7,14 @@
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter-parent</artifactId>
 	    <version>2.5.12</version>
-		<relativePath/>
+		<relativePath></relativePath>
 	</parent>
 	
 	<groupId>org.anyboot</groupId>
 	<artifactId>anyboot-dependency</artifactId>
 	<version>8.5.5.2512-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>anyboot dependency</name>
+	<name>anyboot-dependency</name>
 	<description>AnyLine针对SpringBoot环境的支持</description>
 	<url>http://www.anyboot.org</url>
 	<licenses>
@@ -48,40 +48,6 @@
         <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
 
 		<spring.boot.version>2.5.12</spring.boot.version>
-		<spring.version>5.3.18</spring.version>
-		<!-- <mssql-jdbc.version>7.2.2.jre8</mssql-jdbc.version> -->
-		<db2-jdbc.version>11.5.0.0</db2-jdbc.version>
-		<ojdbc.version>19.3.0.0</ojdbc.version><!-- oracle -->
-		<!-- <postgresql.version>42.2.8</postgresql.version> -->
-		<hgdb.version>4.0-jdbc42</hgdb.version>
-		<!-- <mariadb.version>2.4.4</mariadb.version> -->
-		<javax.servlet.version>4.0.0</javax.servlet.version>
-		<javax.jsp.version>2.0</javax.jsp.version>
-		<taglibs.standard.version>1.1.2</taglibs.standard.version>
-		<javax.mail.version>1.5.0-b01</javax.mail.version>
-		<fastjson.version>1.2.62</fastjson.version>
-		<!-- <logback.version>1.2.3</logback.version> -->
-		<json.version>2.4</json.version>
-		<!-- <dom4j.version>2.1.1</dom4j.version> -->
-		<commons.net.version>3.6</commons.net.version>
-		<commons.io.version>2.6</commons.io.version>
-		<!-- <commons.httpclient.version>3.1</commons.httpclient.version> -->
-		<apache.httpcomponents.version>4.5</apache.httpcomponents.version>
-		<oro.version>2.0.8</oro.version>
-		<ecache.version>2.10.6</ecache.version>
-		<ognl.version>3.2.10</ognl.version>
-		<!-- <slf4j.version>1.7.25</slf4j.version> -->
-		<!-- <spring.version>4.3.23.RELEASE</spring.version>
-		<spring.version>5.1.7.RELEASE</spring.version>
-		-->
-		<aliyun.oss.version>3.8.0</aliyun.oss.version>
-		<aliyun.sms.version>2.1.0</aliyun.sms.version>
-		<alipay.version>3.7.26.ALL</alipay.version>
-		<druid.version>1.1.6</druid.version>
-		<jsch.version>0.1.55</jsch.version>
-		<persistence.version>1.0.2</persistence.version>
-		<jpush.client.version>3.3.12</jpush.client.version>
-		<jpush.version>1.1.6</jpush.version>
 	</properties>
 
 	<dependencyManagement>
@@ -92,52 +58,53 @@
 				<version>${anyline.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
-				<exclusions>
-					<exclusion>
-						<groupId>mysql</groupId>
-						<artifactId>mysql-connector-java</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 
 			<dependency>
 				<groupId>org.anyboot</groupId>
 				<artifactId>anyboot-jdbc</artifactId>
-				<version>${anyboot.jdbc.version}</version>
+				<version>${anyboot.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.anyboot</groupId>
 				<artifactId>anyboot-mvc</artifactId>
-				<version>${anyboot.mvc.version}</version>
+				<version>${anyboot.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-jdbc</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-web</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>${spring.version}</version>
-			</dependency>  
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-webmvc</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-web</artifactId>
-				<version>${spring.boot.version}</version>
-			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
+	<dependencies>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 	<profiles>
 		<profile>
 			<id>central</id>
@@ -173,11 +140,6 @@
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
 						<version>2.10.3</version>
-						<configuration>
-							<charset>UTF-8</charset>
-							<encoding>UTF-8</encoding>
-							<docencoding>UTF-8</docencoding>
-						</configuration>
 						<executions>
 							<execution>
 								<id>attach-javadocs</id>
@@ -226,7 +188,7 @@
 				<snapshotRepository>
 					<id>anyline</id>
 					<name>snapshots</name>
-					<url>http://maven.anyline.org/repository/mavens/</url>
+					<url>http://maven.anyline.org/repository/maven-snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
 			<build>
@@ -266,27 +228,22 @@
 	</profiles>
 	<build>
 		<resources>
-			<!--
-			<resource>
-				<directory>src/main/java</directory>
-			</resource>
-			-->
 			<resource>
 				<directory>src/main/resources</directory>
 			</resource>
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
-						<include>*.tld</include>
-						<include>*.xsd</include>
+					<include>*.tld</include>
+					<include>*.xsd</include>
 				</includes>
 				<targetPath>META-INF</targetPath>
 			</resource>
 			<resource>
 				<directory>/src/main/webapp/WEB-INF</directory>
 				<includes>
-						<include>*.tld</include>
-						<include>*.xsd</include>
+					<include>*.tld</include>
+					<include>*.xsd</include>
 				</includes>
 				<targetPath>META-INF</targetPath>
 			</resource>
@@ -310,19 +267,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	<!--
-	<repositories>
-		<repository>
-			<id>aliyun</id>
-			<name>aliyun repository</name>
-			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
-		</repository>
-		<repository>
-			<id>anyline</id>
-			<name>anyline repository</name>
-			<url>http://maven.anyline.org/repository/maven-public</url>
-		</repository>
-	</repositories>
-	-->
 </project>
 

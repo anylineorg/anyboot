@@ -5,6 +5,7 @@ import org.anyline.jdbc.ds.DynamicDataSource;
 import org.anyline.util.BasicUtil;
 import org.anyline.util.BeanUtil;
 import org.anyline.util.CharUtil;
+import org.anyline.util.ClassUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.MutablePropertyValues;
@@ -122,7 +123,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
      * @param env 配置文件环境
      */
     private static void setFieldsValue(Object obj, String prefix, Environment env ){
-        List<String> fields = BeanUtil.getFieldsName(obj.getClass());
+        List<String> fields = ClassUtil.getFieldsName(obj.getClass());
         for(String field:fields){
             String value = getProperty(prefix, env, field);
             if(BasicUtil.isNotEmpty(value)) {
