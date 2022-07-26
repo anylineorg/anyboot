@@ -12,6 +12,7 @@
     </parent>
     <artifactId>anyboot-start-mysql</artifactId>
     <description>anyboot-start-mysql</description>
+    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>

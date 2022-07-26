@@ -29,14 +29,15 @@
 	</scm>
     <modules>
 		<module>anyboot-dependency</module>
+		<module>anyboot-dependency-web</module>
 		<module>anyboot-jdbc</module>
 		<module>anyboot-mvc</module>
 		<module>anyboot-start</module>
+		<module>anyboot-start-mysql</module>
 		<module>anyboot-start-mvc</module>
 		<module>anyboot-start-mvc-jsp</module>
 		<module>anyboot-start-mvc-jsp-mysql</module>
 		<module>anyboot-start-mvc-mysql</module>
-		<module>anyboot-dependency-web</module>
 	</modules>
 
 	<build>
