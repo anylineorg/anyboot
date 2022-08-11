@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.anyboot</groupId>
 	<artifactId>anyboot</artifactId>
-	<version>8.5.5.2512-SNAPSHOT</version>
+	<version>8.5.6.2512-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>anyboot</name>
 	<url>http://www.anyboot.org</url>
@@ -33,6 +33,7 @@
 		<module>anyboot-jdbc</module>
 		<module>anyboot-mvc</module>
 		<module>anyboot-start</module>
+		<module>anyboot-start-jdbc</module>
 		<module>anyboot-start-mysql</module>
 		<module>anyboot-start-mvc</module>
 		<module>anyboot-start-mvc-jsp</module>

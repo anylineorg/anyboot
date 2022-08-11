@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.5.5.2512-SNAPSHOT</version>
+		<version>8.5.6.2512-SNAPSHOT</version>
 		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
 
@@ -63,7 +63,9 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.0</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -72,6 +74,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.6.3</version>
 				<executions>
 					<execution>
 						<goals>

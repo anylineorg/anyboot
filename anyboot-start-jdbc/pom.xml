@@ -2,22 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>org.anyboot</groupId>
-        <artifactId>anyboot-dependency</artifactId>
-        <version>8.5.6.2512-SNAPSHOT</version>
-        <relativePath>../anyboot-dependency</relativePath>
-    </parent>
-
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>anyboot-dependency-web</artifactId>
+    <parent>
+        <groupId>org.anyboot</groupId>
+        <artifactId>anyboot-start</artifactId>
+        <version>8.5.6.2512-SNAPSHOT</version>
+        <relativePath>../anyboot-start</relativePath>
+    </parent>
+    <artifactId>anyboot-start-jdbc</artifactId>
+    <description>anyboot-start-jdbc</description>
     <packaging>pom</packaging>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
     </dependencies>
-
 </project>
