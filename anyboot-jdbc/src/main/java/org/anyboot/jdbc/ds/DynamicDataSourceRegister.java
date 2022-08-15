@@ -2,13 +2,11 @@ package org.anyboot.jdbc.ds;
 
 import org.anyline.jdbc.ds.DataSourceHolder;
 import org.anyline.jdbc.ds.DynamicDataSource;
-import org.anyline.util.BasicUtil;
-import org.anyline.util.BeanUtil;
-import org.anyline.util.CharUtil;
-import org.anyline.util.ClassUtil;
+import org.anyline.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.MutablePropertyValues;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -109,6 +107,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
             //先取默认配置
             setFieldsValue(ds, "spring.datasource.", env);
             setFieldsValue(ds, prefix, env);
+            SpringContextUtil.getApplicationContext().getAutowireCapableBeanFactory().autowireBean(ds);
             return ds;
         } catch (Exception e) {
             e.printStackTrace();
