@@ -107,7 +107,8 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
             //先取默认配置
             setFieldsValue(ds, "spring.datasource.", env);
             setFieldsValue(ds, prefix, env);
-            SpringContextUtil.getApplicationContext().getAutowireCapableBeanFactory().autowireBean(ds);
+            //SpringContextUtil.getApplicationContext().getAutowireCapableBeanFactory().autowireBean(ds);
+
             return ds;
         } catch (Exception e) {
             e.printStackTrace();
