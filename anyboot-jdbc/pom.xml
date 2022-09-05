@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.5.7.2512-20220815</version>
+		<version>8.5.7.2512-SNAPSHOT</version>
 		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
 	
