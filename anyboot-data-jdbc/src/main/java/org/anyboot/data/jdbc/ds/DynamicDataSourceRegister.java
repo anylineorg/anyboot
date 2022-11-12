@@ -1,12 +1,11 @@
-package org.anyboot.jdbc.ds;
+package org.anyboot.data.jdbc.ds;
 
-import org.anyline.jdbc.ds.DataSourceHolder;
-import org.anyline.jdbc.ds.DynamicDataSource;
+import org.anyline.data.jdbc.ds.DataSourceHolder;
+import org.anyline.data.jdbc.ds.DynamicDataSource;
 import org.anyline.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.MutablePropertyValues;
-import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.boot.jdbc.DataSourceBuilder;

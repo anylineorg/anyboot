@@ -6,20 +6,20 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-dependency</artifactId>
-		<version>8.5.7.2512-SNAPSHOT</version>
+		<version>8.6.1.2612-SNAPSHOT</version>
 		<relativePath>../anyboot-dependency</relativePath>
 	</parent>
 	
-	<artifactId>anyboot-jdbc</artifactId>
-	<name>anyboot-jdbc</name>
+	<artifactId>anyboot-data-jdbc</artifactId>
+	<name>anyboot-data-jdbc</name>
 	<packaging>jar</packaging>
 	<url>http://www.anyboot.org/jdbc</url>
-	<description>anyboot-jdbc</description>
+	<description>anyboot-data-jdbc</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.anyline</groupId>
-			<artifactId>anyline-jdbc</artifactId>
+			<artifactId>anyline-data-jdbc</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

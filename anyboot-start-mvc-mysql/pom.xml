@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.anyboot</groupId>
 		<artifactId>anyboot-start-mvc</artifactId>
-		<version>8.5.7.2512-SNAPSHOT</version>
+		<version>8.6.1.2612-SNAPSHOT</version>
 		<relativePath>../anyboot-start-mvc</relativePath>
 	</parent>
 
@@ -21,11 +21,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.anyboot</groupId>
-			<artifactId>anyboot-jdbc</artifactId>
+			<artifactId>anyboot-data-jdbc</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.anyline</groupId>
-			<artifactId>anyline-jdbc-mysql</artifactId>
+			<artifactId>anyline-data-jdbc-mysql</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>

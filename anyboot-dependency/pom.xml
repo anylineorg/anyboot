@@ -6,13 +6,13 @@
 	<parent>
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter-parent</artifactId>
-	    <version>2.5.12</version>
+	    <version>2.6.12</version>
 		<relativePath></relativePath>
 	</parent>
 	
 	<groupId>org.anyboot</groupId>
 	<artifactId>anyboot-dependency</artifactId>
-	<version>8.5.7.2512-SNAPSHOT</version>
+	<version>8.6.1.2612-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>anyboot-dependency</name>
 	<description>AnyLine针对SpringBoot环境的支持</description>
@@ -43,11 +43,11 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<anyboot.version>8.5.7.2512-SNAPSHOT</anyboot.version>
-		<anyline.version>8.5.7-SNAPSHOT</anyline.version>
+		<anyboot.version>8.6.1.2612-SNAPSHOT</anyboot.version>
+		<anyline.version>8.6.1-SNAPSHOT</anyline.version>
         <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
 
-		<spring.boot.version>2.5.12</spring.boot.version>
+		<spring.boot.version>2.6.12</spring.boot.version>
 	</properties>
 
 	<dependencyManagement>
@@ -62,7 +62,7 @@
 
 			<dependency>
 				<groupId>org.anyboot</groupId>
-				<artifactId>anyboot-jdbc</artifactId>
+				<artifactId>anyboot-data-jdbc</artifactId>
 				<version>${anyboot.version}</version>
 			</dependency>
 			<dependency>
