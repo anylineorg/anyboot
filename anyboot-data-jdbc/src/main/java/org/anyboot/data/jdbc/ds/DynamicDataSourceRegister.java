@@ -25,10 +25,10 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 
     //指定默认数据源(springboot2.0默认数据源是hikari如何想使用其他数据源可以自己配置)
     private static final String DATASOURCE_TYPE_DEFAULT = "com.zaxxer.hikari.HikariDataSource";
-    //默认数据源
+/*    //默认数据源
     private DataSource defaultDataSource;
     //用户自定义数据源
-    private static Map<String, DataSource> springDataSources = new HashMap<>();
+    private static Map<String, DataSource> springDataSources = new HashMap<>();*/
 
 
     @Override
@@ -38,7 +38,8 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
     }
     private void initDefaultDataSource(Environment env) {
         // 读取主数据源
-        defaultDataSource = buildDataSource("spring.datasource",env);
+        DataSource ds = buildDataSource("spring.datasource",env);
+        DynamicDataSource.setDefaultDatasource(ds);
     }
     private void initSpringDataSources(Environment env) {
         // 读取配置文件获取更多数据源
@@ -47,7 +48,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
             for (String prefix : prefixs.split(",")) {
                 // 多个数据源
                 DataSource ds = buildDataSource("spring.datasource."+prefix,env);
-                springDataSources.put(prefix, ds);
+                DynamicDataSource.addDataSource(prefix, ds);
                 log.warn("[创建数据源][prefix:{}]",prefix);
             }
         }
@@ -55,13 +56,11 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata annotationMetadata, BeanDefinitionRegistry beanDefinitionRegistry) {
-        Map<Object, Object> targetDataSources = new HashMap<Object, Object>();
+
         //添加默认数据源
-        targetDataSources.put("dataSource", this.defaultDataSource);
-        DataSourceHolder.reg("dataSource");
+         DataSourceHolder.reg("dataSource");
         //添加其他数据源
-        targetDataSources.putAll(springDataSources);
-        for (String key : springDataSources.keySet()) {
+        for (String key : DynamicDataSource.getDataSources().keySet()) {
             log.warn("[注册数据源][key:{}]",key);
             DataSourceHolder.reg(key);
         }
@@ -71,8 +70,8 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         beanDefinition.setBeanClass(DynamicDataSource.class);
         beanDefinition.setSynthetic(true);
         MutablePropertyValues mpv = beanDefinition.getPropertyValues();
-        mpv.addPropertyValue("defaultTargetDataSource", defaultDataSource);
-        mpv.addPropertyValue("targetDataSources", targetDataSources);
+        mpv.addPropertyValue("defaultTargetDataSource", DynamicDataSource.getDefaultDatasource());
+        mpv.addPropertyValue("targetDataSources", DynamicDataSource.getDataSources());
         //注册 - BeanDefinitionRegistry
         beanDefinitionRegistry.registerBeanDefinition("dataSource", beanDefinition);
 
