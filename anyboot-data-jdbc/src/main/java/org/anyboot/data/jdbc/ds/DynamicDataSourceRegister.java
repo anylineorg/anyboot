@@ -15,9 +15,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotationMetadata;
 
 import javax.sql.DataSource;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware {
@@ -25,10 +23,6 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 
     //指定默认数据源(springboot2.0默认数据源是hikari如何想使用其他数据源可以自己配置)
     private static final String DATASOURCE_TYPE_DEFAULT = "com.zaxxer.hikari.HikariDataSource";
-/*    //默认数据源
-    private DataSource defaultDataSource;
-    //用户自定义数据源
-    private static Map<String, DataSource> springDataSources = new HashMap<>();*/
 
 
     @Override
