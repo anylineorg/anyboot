@@ -78,9 +78,12 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
             if(BasicUtil.isNotEmpty(prefix) && !prefix.endsWith(".")){
                 prefix += ".";
             }
-            String type = getProperty(prefix,env, "type");
+            String type = getProperty(prefix, env, "type");
+            if(null == type){
+                type = getProperty("spring.datasource.", env, "type");
+            }
             if (type == null) {
-                type = DATASOURCE_TYPE_DEFAULT;// 默认DataSource
+                type = DATASOURCE_TYPE_DEFAULT;
             }
 
             Class<? extends DataSource> dataSourceType = (Class<? extends DataSource>) Class.forName(type);
@@ -99,7 +102,6 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
             //先取默认配置
             setFieldsValue(ds, "spring.datasource.", env);
             setFieldsValue(ds, prefix, env);
-            //SpringContextUtil.getApplicationContext().getAutowireCapableBeanFactory().autowireBean(ds);
 
             return ds;
         } catch (Exception e) {
