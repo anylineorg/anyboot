@@ -20,8 +20,8 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.anyboot</groupId>
-			<artifactId>anyboot-data-jdbc</artifactId>
+			<groupId>org.anyline</groupId>
+			<artifactId>anyline-data-jdbc</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.anyline</groupId>

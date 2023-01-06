@@ -60,16 +60,6 @@
 				<scope>import</scope>
 			</dependency>
 
-			<dependency>
-				<groupId>org.anyboot</groupId>
-				<artifactId>anyboot-data-jdbc</artifactId>
-				<version>${anyboot.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.anyboot</groupId>
-				<artifactId>anyboot-mvc</artifactId>
-				<version>${anyboot.version}</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>

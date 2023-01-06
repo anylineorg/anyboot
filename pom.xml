@@ -30,8 +30,6 @@
     <modules>
 		<module>anyboot-dependency</module>
 		<module>anyboot-dependency-web</module>
-		<module>anyboot-data-jdbc</module>
-		<module>anyboot-mvc</module>
 		<module>anyboot-start</module>
 		<module>anyboot-start-jdbc</module>
 		<module>anyboot-start-mysql</module>
