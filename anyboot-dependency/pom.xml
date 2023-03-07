@@ -12,7 +12,7 @@
 	
 	<groupId>org.anyboot</groupId>
 	<artifactId>anyboot-dependency</artifactId>
-	<version>8.6.2.2612-SNAPSHOT</version>
+	<version>8.6.3.2612-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>anyboot-dependency</name>
 	<description>AnyLine针对SpringBoot环境的支持</description>
@@ -43,8 +43,8 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<anyboot.version>8.6.2.2612-SNAPSHOT</anyboot.version>
-		<anyline.version>8.6.2-SNAPSHOT</anyline.version>
+		<anyboot.version>8.6.3.2612-SNAPSHOT</anyboot.version>
+		<anyline.version>8.6.3-SNAPSHOT</anyline.version>
         <maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
 
 		<spring.boot.version>2.6.12</spring.boot.version>
@@ -167,6 +167,7 @@
 				</plugins>
 			</build>
 		</profile>
+
 		<profile>
 			<id>anyline</id>
 			<distributionManagement>
@@ -199,7 +200,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>2.10.3</version>
+						<version>3.0.1</version>
 						<configuration>
 							<skip>true</skip>
 						</configuration>
