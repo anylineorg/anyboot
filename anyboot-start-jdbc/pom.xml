@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.anyboot</groupId>
         <artifactId>anyboot-start</artifactId>
-        <version>8.7.1.2612-SNAPSHOT</version>
+        <version>8.7.2.2612-SNAPSHOT</version>
         <relativePath>../anyboot-start</relativePath>
     </parent>
     <artifactId>anyboot-start-jdbc</artifactId>
@@ -18,6 +18,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.anyline</groupId>
+            <artifactId>anyline-environment-spring-data-jdbc</artifactId>
         </dependency>
     </dependencies>
 </project>

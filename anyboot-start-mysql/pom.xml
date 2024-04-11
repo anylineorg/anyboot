@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.anyboot</groupId>
         <artifactId>anyboot-start-jdbc</artifactId>
-        <version>8.7.1.2612-SNAPSHOT</version>
+        <version>8.7.2.2612-SNAPSHOT</version>
         <relativePath>../anyboot-start-jdbc</relativePath>
     </parent>
     <artifactId>anyboot-start-mysql</artifactId>
